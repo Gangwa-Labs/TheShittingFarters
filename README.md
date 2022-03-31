@@ -1,3 +1,2 @@
-# TheShittingFarters
-Only for People who shit and fart!
+# Globular Glory
 Literally the best team ever
