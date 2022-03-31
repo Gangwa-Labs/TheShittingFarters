@@ -1,2 +1,2 @@
 # TheShittingFarters
-Only for People who shit and fart
+Only for People who shit and fart!
