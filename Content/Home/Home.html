@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Home - Atmosleep</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Importing Open Sans, an open source Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../Style.css"> <!-- Why is this broken -->
+
+        <style>
+            /* Site sections */
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            .nav {
+                position: fixed;
+                padding: 0% 2% 1% 2%;
+                width: 100%;
+                color: white;
+            }
+
+            /* Used to split the page into even sections */
+            /* Using floats, not flex boxes (for ease of implementation) */
+            .half {
+                width: 49%;
+                float: left;
+            }
+            .third {
+                width: 32%;
+                float: left;
+            }
+
+            /* Site assets */
+            .button {
+                padding: 10px;
+                border: 1px solid white;
+            }
+            /* ^^Items that will be transferred to the global CSS sheet after it gets fixed */
+
+
+            #heroimage {
+                background-image: url(Background\ Image\ 1.png);
+                height: 800px;
+                /* Making the left and right padding 50px, top and bottom 200px 10px respectively */
+                padding: 200px 50px 10px 50px;
+            }
+            
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <!-- Navigation bar at the top of each page -->
+        <div class="nav">
+            <div class="third" style="text-align: left">
+                <h3>Atmosleep</h3>
+            </div>
+            <div class="third" style="text-align: center; font-weight: lighter;">
+                <div class="third">
+                    <p>Home</p>
+                </div>
+                <div class="third">
+                    <p>About Us</p>
+                </div>
+                <div class="third">
+                    <p>Investors</p>
+                </div>
+            </div>
+        </div>
+        <div id="heroimage">
+            <div class="half">
+                <h1>Achieve Your Dreams, Day and Night</h1>
+                <p>You’ll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat it, too.</p>
+                <div class="button">
+                    <p>Learn More</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
