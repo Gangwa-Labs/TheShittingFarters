@@ -142,7 +142,36 @@
         #infobox img:hover {
             opacity: 0.5;
         }
+
+        #flexy {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .flexclass {
+            flex-grow: 1;
+            width: 50%;
+            height: 50%;
+        }
+
+        #box1 {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+        }
+
+        #box2 {}
+
+        #box3 {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+        }
+
+        #box4 {}
+        div{
+            /* border: 1px solid red; */
+        }
     </style>
+
 </head>
 
 <body>
@@ -200,8 +229,24 @@
         </div>
     </div>
 
-
-    <div class="contentbox">
+    <div id="flexy" style="width: 100%;">
+        <div id="box1" class="flexclass">
+            <h1>
+                <br>
+                "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
+                restful"
+            </h1>
+        </div>
+        <div id="box2" class="flexclass"><img src="led light.png" style="width: 100%; z-index: 1;"></div>
+        <div id="box4" class="flexclass"> <img src="fan.png" style="width: 100%;z-index: 1;"></div>
+        <div id="box3" class="flexclass">
+            <h1>
+                <br>
+                "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
+            </h1>
+        </div>
+    </div>
+    <!-- <div class="contentbox">
         <div id="leftbackground">
             <h1>
                 <br><br>
@@ -222,7 +267,7 @@
         </div>
 
         <img src="fan.png" style="margin-top: 20%; left:1%; position:absolute; width: 70vh; z-index: 1;">
-    </div>
+    </div> -->
 
 
 
