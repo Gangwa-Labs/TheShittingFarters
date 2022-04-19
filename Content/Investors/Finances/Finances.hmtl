@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>Fiances - Atmosleep</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Importing Open Sans, an open source Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../Style.css">
+        <!-- <link rel="stylesheet" href="../Style.css"> --> <!-- Why is this broken -->
+        <style>
+            /* Site sections */
+            /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
+
+
+            /* The first purple block at the beginning of the page */
+            #heroimage {
+                background-image: url(Background\ Image\ 1.png);
+                height: 520px;
+                padding: 150px 50px 0px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+                color: white;
+            }
+            #pillow1 {
+                width: 60%;
+                height: 100%;
+                background-image: url(Pillow\ 1.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                float: right;
+            }
+            .whitesection {
+                margin: 80px 20% 80px 20%;
+                text-align: center;
+            }
+            #circle {
+                margin: auto;
+                margin-bottom: 30px;
+                width: 12px;
+                height: 12px;
+                background-color: #BFA1AD;
+                border-radius: 50%;
+            }
+            #featureoverview {
+                background-image: url(Background\ Image\ 2.png);
+                height: 380px;
+                padding: 100px 50px 100px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+                color: white;
+            }
+            #pillow2 {
+                width: 50%;
+                height: 100%;
+                background-image: url(Pillow\ 2.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                float: left;
+            }
+            #feedbackbutton {
+                margin: auto;
+                margin-top: 30px;
+                padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
+                width: 130px;
+                border: 1px solid black;
+                border-radius: 50px;
+                text-align: center;
+                color: black;
+                opacity: 1;
+            }
+            
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <!-- Navigation bar at the top of each page -->
+        <div class="nav">
+            <div class="third" style="text-align: left">
+                <h3>Atmosleep</h3>
+            </div>
+            <div class="third" style="text-align: center">
+                <a href="Home.html"><div class="third" style="padding-top: 12px; border-bottom: 1px solid white;">
+                    <p>Home</p>
+                </div></a>
+                <a href="../About Us/About_Us.html"><div class="third" style="padding-top: 12px">
+                    <p>About Us</p>
+                </div></a>
+                <a><div class="third" style="padding-top: 12px">
+                    <p>Investors</p>
+                </div></a>
+            </div>
+            <div class="third" style="text-align: right">
+                <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
+                <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
+            </div>
+        </div>
+        <div id="heroimage">
+            <div class="third" style="margin-left: 3%">
+                <h1>Achieve Your Dreams, Day And Night</h1>
+                <p>
+                    You’ll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat it, too.
+                </p>
+                <div class="button">
+                    <p>Learn More</p>
+                </div>
+            </div>
+            <div id="pillow1"></div>
+        </div>
+        <div class="whitesection">
+            <div id="circle"></div>
+            <p>
+                Atmosleep’s MVP1 consists of a pillow with a built-in speaker. The product will allow users to connect to a Bluetooth speaker and play materials such as meditation, podcasts, and lectures as they sleep. The comfort pillow will be made from a cooling stuffing such as memory foam with cooling gel. The speaker will be slim and not noticeable by the touch of the pillow.
+            </p>
+            <p>
+                Atmosleep’s MVP2 is an app that customizes the learning process while sleeping. The app allows users to input their own study material and have it read to them in their sleep. The app will also have a sleep quality tracker that will ensure that information is relayed only during certain times of one’s REM cycle. MVP3 will potentially combine MVP1 and MVP2.
+            </p>
+        </div>
+        <div id="featureoverview">
+            <div id="pillow2"></div>
+            <div id="third" style="margin-left: 53%">
+                <h1>An All-In-One Adaptvie AI Pillow</h1>
+                <p>
+                    With adjustable plushness, LED lighting, embedded sleep analytics, a speaker system for your favorite music, meditations, and study tools …all activated through your voice. Atmos listens to your needs to allow for screen-free comfort as you lounge or prepare to sleep.
+                </p>
+                <div class="button">
+                    <p>Learn More</p>
+                </div>
+            </div>
+        </div>
+        <div class="whitesection">
+            <p>
+                We want to hear your thoughts! Help give us valuable feedback by completing the form below. We want to create a supporting community that will be first in line to receive our newest products.
+            </p>
+            <div id="feedbackbutton">
+                <p>Feedback Form</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="third" style="text-align: left">
+                <h4>Atmosleep</h4>
+            </div>
+            <div class="third" style="text-align: right; float: right;">
+                <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>
