@@ -85,8 +85,12 @@
                 background-size: 100%;
                 background-repeat: no-repeat;
                 height: 520px;
-                padding: 150px 50px 0px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+                padding: 150px 50px 20px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
                 color: white;
+                overflow: auto;
+            }
+            #heroimage .third {
+                margin-left: 3%;
             }
             .whitesection {
                 margin: 80px 8% 80px 8%;
@@ -106,6 +110,46 @@
             #text {
                 width: 50%;
                 float: right;
+            }
+            @media only screen and (max-width: 1148px) {
+                h1 {
+                    font-size: 20pt;
+                    line-height: 1.1em;
+                }
+                p {
+                    font-size: 10pt;
+                }
+                .nav .third img {
+                    visibility: hidden;
+                }
+                #heroimage {
+                    background-image: url(Background\ Image\ 2.png);
+                    height: 200px;
+                    background-size: auto;
+                }
+                #heroimage .third {
+                    margin: auto;
+                    padding: 0px 10% 0px 10%;
+                    width: 80%;
+                    float: none;
+                    text-align: center;
+                }
+                #roundedrectangle {
+                    width: 84%;
+                    margin: 0px 8% 20px 8%;
+                    float: none;
+                    font-size: 20pt;
+                }
+                #text {
+                    float: none;
+                    width: 80%;
+                    margin: 30px 10% 0px 10%;
+                }
+            }
+            @media only screen and (max-width: 675px) {
+                #heroimage {
+                    height: 250px;
+                }
             }
         </style>
     </head>
@@ -131,7 +175,7 @@
             </div>
         </div>
         <div id="heroimage">
-            <div class="third" style="margin-left: 3%">
+            <div class="third">
                 <h1>Our Problem & Solution</h1>
                 <p>
                     In a world increasingly strapped for time, Atmosleep aims to remove the decision between sacrificing work or sacrificing sleep. Atmosleep hopes to create a product that relieves stress and promotes wellness.

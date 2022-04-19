@@ -16,6 +16,24 @@
             /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
 
 
+            /* Site assets */
+            .button {
+                margin-top: 30px;
+                padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
+                width: 100px;
+                border: 1px solid white;
+                border-radius: 50px;
+                text-align: center;
+                color: white;
+                opacity: 1;
+            }
+            .button:hover{
+                opacity: .5;
+            }
+
+            /* The external CSS stylesheet still isn't working :( */
+
+
             /* The first purple block at the beginning of the page */
             #heroimage {
                 background-image: url(Background\ Image\ 1.png);
@@ -45,9 +63,12 @@
             }
             #featureoverview {
                 background-image: url(Background\ Image\ 2.png);
-                height: 380px;
+                height: 420px;
                 padding: 100px 50px 100px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
                 color: white;
+            }
+            #featureoverview .third {
+                margin-right: 8%;
             }
             #pillow2 {
                 width: 50%;
@@ -68,7 +89,63 @@
                 color: black;
                 opacity: 1;
             }
-            
+
+            @media only screen and (max-width: 1148px) {
+                h1 {
+                    font-size: 20pt;
+                    line-height: 1.1em;
+                }
+                p {
+                    font-size: 10pt;
+                }
+                .nav .third img {
+                    visibility: hidden;
+                }
+                #heroimage .third {
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+                }
+                .button {
+                    margin: auto;
+                    margin-top: 20px;
+                }
+                #pillow1 {
+                    margin: 20px auto 20px auto;
+                    width: 60%;
+                    float: none;
+                }
+                #featureoverview .third {
+                    margin: -80px auto 20px auto;
+                    padding: 0px 10% 0px 10%;
+                    width: 80%;
+                    float: none;
+                    text-align: center;
+                }
+                #pillow2 {
+                    margin: -10px auto 20px auto;
+                    width: 55%;
+                    height: 80%;
+                    float: none;
+                }
+            }
+
+            @media only screen and (max-width: 675px) {
+                #heroimage {
+                    height: 450px;
+                }
+
+                #pillow1 {
+                    width: 80%;
+                }
+
+                #pillow2 {
+                    width: 80%
+                }
+                #featureoverview .third {
+                    margin-top: -140px;
+                }
+            }
         </style>
         <script>
 
@@ -102,9 +179,9 @@
                 <p>
                     You’ll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat it, too.
                 </p>
-                <div class="button">
+                <a href="../About Us/About_Us.html"><div class="button">
                     <p>Learn More</p>
-                </div>
+                </div></a>
             </div>
             <div id="pillow1"></div>
         </div>
@@ -119,23 +196,23 @@
         </div>
         <div id="featureoverview">
             <div id="pillow2"></div>
-            <div id="third" style="margin-left: 53%">
+            <div class="third" style="float: right">
                 <h1>An All-In-One Adaptvie AI Pillow</h1>
                 <p>
                     With adjustable plushness, LED lighting, embedded sleep analytics, a speaker system for your favorite music, meditations, and study tools …all activated through your voice. Atmos listens to your needs to allow for screen-free comfort as you lounge or prepare to sleep.
                 </p>
-                <div class="button">
+                <a href="../About Us/About_Us.html"><div class="button">
                     <p>Learn More</p>
-                </div>
+                </div></a>
             </div>
         </div>
         <div class="whitesection">
             <p>
                 We want to hear your thoughts! Help give us valuable feedback by completing the form below. We want to create a supporting community that will be first in line to receive our newest products.
             </p>
-            <div id="feedbackbutton">
+            <a><div id="feedbackbutton">
                 <p>Feedback Form</p>
-            </div>
+            </div></a>
         </div>
         <div class="footer">
             <div class="third" style="text-align: left">
