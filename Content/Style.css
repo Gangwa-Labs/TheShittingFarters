@@ -46,7 +46,10 @@ h1 {
     width: 32%;
     float: left;
 }
-
+.sixth {
+    float: left;
+    width: 19%;
+}
 /* Site assets */
 .button {
     margin-top: 30px;
