@@ -26,19 +26,29 @@
                 font-style: italic;
             }
             #title{
-                font-size: 50px;
-                font-weight: bold;
+                font-size: 70px;
             }
             #titlecontainer{
                 position: fixed;
                 left: 900px;
-                font-family: 'times new roman';
-                font-weight: bold;
+                top:200px;
+                z-index: 100;
             }
             #imagecontainer{
                 position: relative;
                 top: 800px;
                 left: 100px;
+            }
+            #blur{
+                width:1300px;
+                position: fixed;
+                left: 500px;
+                top: 0px
+            }
+            #about{
+                position: relative;
+                padding: 100px;
+                font-size: 40pt
             }
        
         
@@ -49,14 +59,21 @@
             <p id=title>Green Design Team: Atmosleep</p>
             <p id=description1> hopes to create a product that <br>relieves stress and promotes wellness.</p>
         </div>
-        <img src='greenblur.png' >
+        <div id=about>
+            We are the designers <br>and builders 
+            behind the <br>Atmosleep page.
+            <br>
+            <br>
+            scroll to meet us...
+        </div>
+        <img id=blur src='blur2.png' >
         <br>
         <div id=imagecontainer>
             <div id="Ezra Bird">
                 <p class=description> Ezra Bird <br> Programmer and Leadership</p>
                 <img src="headshot.jpg" alt="Ezra Bird Headshot">
                 
-                
+           
             </div>
             <div id="Iris Leung">
                 <p class=description> Iris Leung <br> Management & Leadership, UI/UX Designer</p>
