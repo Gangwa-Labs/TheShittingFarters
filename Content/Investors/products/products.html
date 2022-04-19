@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>product - Atmosleep</title>
+    <!-- Importing Open Sans, an open source Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+    <style>
+        /*site stylesheet*/
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            opacity: 1;
+        }
+
+        a:hover {
+            opacity: .5;
+        }
+
+        h1 {
+            font-size: 38pt;
+            line-height: 41pt;
+            color: white;
+            text-align: center;
+            line-height: 130%;
+        }
+
+        .nav {
+            background-image: url(Background\ Image\ 1.png);
+            position: fixed;
+            padding: 0% 2% 1% 2%;
+            width: 96%;
+            color: white;
+        }
+
+        .nav p {
+            font-size: 10pt;
+        }
+
+        .footer {
+            background-image: url(Background\ Image\ 1.png);
+            padding: 2%;
+            width: 96%;
+            color: white;
+            overflow: auto;
+        }
+
+        .footer p {
+            font-size: 10pt;
+            margin-top: 25px;
+        }
+
+        /* Used to split the page into even sections */
+        /* Using floats, not flex boxes (for ease of implementation) */
+        .half {
+            width: 49%;
+            float: left;
+        }
+
+        .third {
+            width: 32%;
+            float: left;
+        }
+
+
+
+        #mainbackground {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+            padding: 150px 50px 0px 50px;
+            /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+            color: white;
+            height: 68vh;
+        }
+
+        #maintext {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            z-index: 1;
+            font-size: 20vh;
+            font-weight: bold;
+        }
+
+        #mainpic img {
+            text-align: center;
+            z-index: 2;
+            width: 50%;
+            position: absolute;
+            left: 25%;
+            top: 25vh;
+        }
+
+        #leftbackground {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+            padding: 150px 50px 0px 50px;
+            width: 44.5%;
+            height: 60vh;
+            float: left;
+            z-index: 1;
+            position: relative;
+        }
+
+        #rightbackground {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+            padding: 150px 50px 0px 50px;
+            width: 44.5%;
+            height: 60vh;
+            float: right;
+            z-index: 1;
+            position: relative;
+        }
+
+        .contentbox {
+            height: 60vh;
+            z-index: -1;
+            width: auto;
+            margin: 0;
+        }
+
+        #infobox {
+            z-index: 0;
+            text-align: center;
+            width: auto;
+            margin: 0;
+            height: auto;
+            margin-top: 30vh;
+        }
+
+        #infobox img:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" style="z-index: 3;">
+        <div class="third" style="text-align: left">
+            <h3>Atmosleep</h3>
+        </div>
+        <div class="third" style="text-align: center;">
+            <a href="../../Home/Home.html">
+                <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Home</p>
+                </div>
+            </a>
+            <a href="../../About Us/About_Us.html">
+                <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>About Us</p>
+                </div>
+            </a>
+            <a href="../problems/Problems_Solution.html">
+                <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Problems</p>
+                </div>
+            </a>
+            <a href="../products/products.html">
+                <div class="sixth" style="padding-top: 12px;border-bottom: 1px solid white;width: 15%;float: left;">
+                    <p>Products</p>
+                </div>
+            </a>
+            <a href="../Finances/Finances.html">
+                <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Investors</p>
+                </div>
+            </a>
+            <a href="../Marketplace/marketplace.html">
+                <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Marketplace</p>
+                </div>
+            </a>
+        </div>
+        <div class="third" style="text-align: right">
+            <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
+            <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
+        </div>
+    </div>
+    <!--close of nav bar-->
+
+    <div id="mainbackground">
+        <!--content starts here-->
+        <div id="maintext">
+            Atmosleep
+        </div>
+
+        <div id="mainpic">
+            <img src="Pillow 1.png">
+        </div>
+    </div>
+
+
+    <div class="contentbox">
+        <div id="leftbackground">
+            <h1>
+                <br><br>
+                "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
+                restful"
+            </h1>
+        </div>
+        <img src="led light.png" style="margin-top: 10%; margin-left: 2%; position:absolute; width: 70vh;z-index: 1;">
+    </div>
+
+    <br>
+    <div class="contentbox">
+        <div id="rightbackground">
+            <h1>
+                <br><br><br>
+                "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
+            </h1>
+        </div>
+
+        <img src="fan.png" style="margin-top: 20%; left:1%; position:absolute; width: 70vh; z-index: 1;">
+    </div>
+
+
+
+    <div id="infobox">
+        <img src="box1.png" alt="information pic" style="position: abosulte; width: 400px; top: 100px;">
+        <img src="box5.png" alt="information pic" style="position: abosulte; top: -100px; width: 400px;">
+        <br>
+        <img src="box2.png" alt="information pic" style="position: abosulte;  width: 400px;">
+        <img src="box3.png" alt="information pic" style="position: abosulte; width: 300px; margin-left: -60px;">
+        <img src="box4.png" alt="information pic"
+            style="position: abosulte; width: 285px; left:10vh; margin-top: -80px;margin-left: -90px;">
+    </div>
+    <br>
+    <br>
+
+    <div class="footer">
+        <!--footer starts here-->
+        <div class="third" style="text-align: left">
+            <h4>Atmosleep</h4>
+        </div>
+        <div class="third" style="text-align: right; float: right;">
+            <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>Marketplace</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Importing Open Sans, an open source Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../Style.css">
+        <!-- <link rel="stylesheet" href="../Style.css"> --> <!-- Why is this broken -->
+        <style>
+            /* Site sections */
+            /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
+
+
+            /* Site assets */
+            .button {
+                margin-top: 30px;
+                padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
+                width: 100px;
+                border: 1px solid white;
+                border-radius: 50px;
+                text-align: center;
+                color: white;
+                opacity: 1;
+            }
+            .button:hover{
+                opacity: .5;
+            }
+
+            /* The external CSS stylesheet still isn't working :( */
+
+
+            /* The first purple block at the beginning of the page */
+            #heroimage {
+                background-image: url(Background\ Image\ 1.png);
+                height: 520px;
+                padding: 150px 50px 0px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+                color: white;
+            }
+            .whitesection {
+                margin: 80px 20% 80px 20%;
+                text-align: center;
+            }
+            #circle {
+                margin: auto;
+                margin-bottom: 30px;
+                width: 12px;
+                height: 12px;
+                background-color: #BFA1AD;
+                border-radius: 50%;
+            }
+            #featureoverview .third {
+                margin-right: 8%;
+            }
+            #feedbackbutton {
+                margin: auto;
+                margin-top: 30px;
+                padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
+                width: 130px;
+                border: 1px solid black;
+                border-radius: 50px;
+                text-align: center;
+                color: black;
+                opacity: 1;
+            }
+
+            @media only screen and (max-width: 1148px) {
+                h1 {
+                    font-size: 20pt;
+                    line-height: 1.1em;
+                }
+                p {
+                    font-size: 10pt;
+                }
+                .nav .third img {
+                    visibility: hidden;
+                }
+                #heroimage .third {
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+                }
+                .button {
+                    margin: auto;
+                    margin-top: 20px;
+                }
+                #featureoverview .third {
+                    margin: -80px auto 20px auto;
+                    padding: 0px 10% 0px 10%;
+                    width: 80%;
+                    float: none;
+                    text-align: center;
+                }
+            }
+
+            @media only screen and (max-width: 675px) {
+                #heroimage {
+                    height: 450px;
+                }
+
+                #pillow1 {
+                    width: 80%;
+                }
+
+                #pillow2 {
+                    width: 80%
+                }
+                #featureoverview .third {
+                    margin-top: -140px;
+                }
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <!-- Navigation bar at the top of each page -->
+        <div class="nav"style="z-index: 2;">
+            <div class="third" style="text-align: left">
+                <h3>Atmosleep</h3>
+            </div>
+            <div class="third" style="text-align: center">
+                <a href="../../Home/Home.html"><div class="sixth" style="padding-top: 12px; width: 15%;float: left;">
+                    <p>Home</p>
+                </div></a>
+                <a href="../../About Us/About_Us.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>About Us</p>
+                </div></a>
+                <a href="../problems/Problems_Solution.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Problems</p>
+                </div></a>
+                <a href="../products/products.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Products</p>
+                </div></a>
+                <a href="../Finances/Finances.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+                    <p>Investors</p>
+                </div></a>
+                <a href="../Marketplace/marketplace.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;border-bottom: 1px solid white;">
+                    <p>Marketplace</p>
+                </div></a>
+            </div>
+        </div>
+        <div id="heroimage">
+            <div class="third" style="margin-left: 3%">
+                <h1>Our Market</h1>
+                <p>
+                    We cater to young students studying their bio notes over night to grandparents falling asleep to their favorite opera.
+                </p>
+                </div></a>
+            </div>
+        <div class="whitesection">
+            <div id="circle"></div>
+            <p>
+                We want to hear your thoughts! Help give us valuable feedback by completing the form below. We want to create a supporting community that will be first in line to receive our newest products.
+            </p>
+            <a><div id="feedbackbutton">
+                <p>Feedback Form</p>
+            </div></a>
+        </div>
+        <div class="footer">
+            <div class="third" style="text-align: left">
+                <h4>Atmosleep</h4>
+            </div>
+            <div class="third" style="text-align: right; float: right;">
+                <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>
