@@ -2,40 +2,90 @@
     <head>
         <title>Green Design Team</title>
         <style>
+            body{
+                font-family: helvetica;
+            
+                background-color: gray;
+                color: white;
+            }
             img{
                 width:200px;
+                padding: 10px;
+                border-radius: 30px;
+                
             }
+            .description{
+                position: absolute;
+                left: 250px;
+            }
+            h1{
+                font-size: 100px;
+            }
+            #description1{
+                font-size: 20px;
+                font-style: italic;
+            }
+            #title{
+                font-size: 50px;
+                font-weight: bold;
+            }
+            #titlecontainer{
+                position: fixed;
+                left: 900px;
+                font-family: 'times new roman';
+                font-weight: bold;
+            }
+            #imagecontainer{
+                position: relative;
+                top: 800px;
+                left: 100px;
+            }
+       
+        
         </style>
     </head>
     <body>
-        <h1>Green Design Team: Atmosleep</h1>
-        <p>Atmosleep hopes to create a product that relieves stress and promotes wellness.</p>
+        <div id=titlecontainer>
+            <p id=title>Green Design Team: Atmosleep</p>
+            <p id=description1> hopes to create a product that <br>relieves stress and promotes wellness.</p>
+        </div>
+        <img src='greenblur.png' >
         <br>
-        <div id="Ezra Bird">
-            <img src="headshot.jpg" alt="Ezra Bird Headshot">
-            <p>Ezra Bird</p>
-            <br>
-            <p>Programmer and Leadership</p>
+        <div id=imagecontainer>
+            <div id="Ezra Bird">
+                <p class=description> Ezra Bird <br> Programmer and Leadership</p>
+                <img src="headshot.jpg" alt="Ezra Bird Headshot">
+                
+                
+            </div>
+            <div id="Iris Leung">
+                <p class=description> Iris Leung <br> Management & Leadership, UI/UX Designer</p>
+
+                <img src="Iris Headshot.jpg" alt="Iris Leung Headshot">
+            
+                
+            </div>
+            <div id="Steven Sun">
+                <p class=description> Steven Sun <br> UI/UX Designer</p>
+
+                <img src="000164370024.jpeg" alt="Steven Sun Head shot">
+                
+                
+            </div>
+            <div id="Matthew Suri">
+                <p class=description>Matthew Suri <br> Outreach and Programming</p>
+
+                <img src="Matt.jpg" alt="Matthew Suri Head Shot">
+               
+                
+            </div>
+            
+            <div id="Ellie Paik">
+                <p class=description>  Ellie Paik <br> UI/UX Designer</p>
+                <img src="ellie.png" alt="Ellie Head Shot">
+               
+            </div>
         </div>
-        <div id="Iris Leung">
-            <img src="Iris Headshot.jpg" alt="Iris Leung Headshot">
-            <p>Iris Leung</p>
-            <p>Management & Leadership, UI/UX Designer</p>
-        </div>
-        <div id="Steven Sun">
-            <img src="000164370024.jpeg" alt="Steven Sun Head shot">
-            <p>Steven Sun</p>
-            <p>UI/UX Designer</p>
-        </div>
-        <div id="Matthew Suri">
-            <img src="Matt.jpg" alt="Matthew Suri Head Shot">
-            <p>Matthew Suri</p>
-            <p>Outreach and Programming</p>
-        </div>
-        <div id="Ellie Paik">
-            <img src="ellie.png" alt="Ellie Head Shot">
-            <p>Ellie Paik</p>
-            <p>UI/UX Design</p>
-        </div>
+
     </body>
 </html>
