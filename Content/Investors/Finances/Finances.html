@@ -1,0 +1,232 @@
+<html>
+
+<head>
+    <title>Finances - Atmosleep</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- Importing Open Sans, an open source Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="icon" type="image/x-icon" href="Pillow 1.png">
+    <!-- <link rel="stylesheet" href="../Style.css"> -->
+    <!-- Why is this broken -->
+    <style>
+        
+        /* Site sections */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            opacity: 1;
+        }
+
+        a:hover {
+            opacity: .5;
+        }
+
+        h1 {
+            font-size: 38pt;
+            line-height: 41pt;
+        }
+
+        hr {
+            border-color: white;
+            height: 2px;
+            background-color: white;
+        }
+
+        .nav {
+            background-image: url(Background\ Image\ 1.png);
+            position: fixed;
+            padding: 0% 2% 1% 2%;
+            width: 96%;
+            color: white;
+        }
+
+        .nav p {
+            font-size: 10pt;
+        }
+
+        .footer {
+            background-image: url(Background\ Image\ 1.png);
+            padding: 2%;
+            width: 96%;
+            color: white;
+            overflow: auto;
+        }
+
+        .footer p {
+            font-size: 10pt;
+            margin-top: 25px;
+        }
+
+        /* Used to split the page into even sections */
+        /* Using floats, not flex boxes (for ease of implementation) */
+        .half {
+            width: 49%;
+            float: left;
+        }
+
+        .third {
+            width: 32%;
+            float: left;
+        }
+
+        /* Site assets */
+        .button {
+            margin-top: 30px;
+            padding: 3px 30px 3px 30px;
+            /* Making the left and right padding 30px, top and bottom 3px */
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 50px;
+            text-align: center;
+            color: white;
+            opacity: 1;
+        }
+
+        .button:hover {
+            opacity: .5;
+        }
+
+        /* The external CSS stylesheet still isn't working :( */
+
+
+        /* The first purple block at the beginning of the page */
+        #heroimage {
+            background-image: url(Background\ Image\ 1.png);
+            height: 520px;
+            padding: 150px 50px 0px 50px;
+            /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+            color: white;
+        }
+
+        #pillow1 {
+            width: 60%;
+            height: 100%;
+            background-image: url(Pillow\ 1.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            float: right;
+        }
+
+        .whitesection {
+            margin: 80px 20% 80px 20%;
+            text-align: center;
+        }
+
+        #circle {
+            margin: auto;
+            margin-bottom: 30px;
+            width: 12px;
+            height: 12px;
+            background-color: #BFA1AD;
+            border-radius: 50%;
+        }
+
+        #featureoverview {
+            background-image: url(Background\ Image\ 2.png);
+            height: 380px;
+            padding: 100px 50px 100px 50px;
+            /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+            color: white;
+        }
+
+        #pillow2 {
+            width: 50%;
+            height: 100%;
+            background-image: url(Pillow\ 2.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            float: left;
+        }
+        #sheets{
+            height: 45%;
+            width: 50%;
+            position: absolute;
+            right: 5%;
+        }
+        #contingency{
+            padding-top: 100px;
+            width: 85%;
+            height: 60%;
+            margin: auto;
+        }
+        #whitetitle{
+            float: right;
+            margin: auto;
+            padding-right: 10%;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!-- Navigation bar at the top of each page -->
+    <div class="nav">
+        <div class="third" style="text-align: left">
+            <h3>Atmosleep</h3>
+        </div>
+        <div class="third" style="text-align: center">
+            <a href="Home.html">
+                <div class="third" style="padding-top: 12px; border-bottom: 1px solid white;">
+                    <p>Home</p>
+                </div>
+            </a>
+            <a href="../About Us/About_Us.html">
+                <div class="third" style="padding-top: 12px">
+                    <p>About Us</p>
+                </div>
+            </a>
+            <a>
+                <div class="third" style="padding-top: 12px">
+                    <p>Investors</p>
+                </div>
+            </a>
+        </div>
+        <div class="third" style="text-align: right">
+            <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
+            <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
+        </div>
+    </div>
+    <div id="heroimage">
+        <div class="third" style="margin-left: 3%">
+            <h1>Dream of Dollars</h1>
+            <hr>
+            <p>
+                Finances so simple that you could do them in your sleep. Learn how Atmosleep is leading the sleep market
+                with cutting edge Finances and smart accounting methods. </p>
+        </div>
+        <div id="sheets"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvOSJpVkpT9jpPqwS_s290yeuj5VZpBMGj4yoVKaSkdIlolkTFUIjKGIkT9_Pueg/pubhtml?widget=true&amp;headers=false" style="height:100%;width:100%;" title="Fiances"></iframe></div>
+    </div>
+    <div id="whitetitle">
+        <h1>Contingency Plan</h1>
+    </div>
+    <div id="contingency"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrLW1uJViEgyxmbFIgZ8IliChB5HSFGxsByDEKzNl3hePJ15QzTofywAxoG99-iw/pubhtml?widget=true&amp;headers=false" style="height:100%;width:100%;" title="Contingency Plan"></iframe></div>
+    <div class="whitesection">
+        <div id="circle"></div>
+        <p>
+            Atmosleep knows feeling safe and sound in your investments is just as important as sleeping safe and sound! With detailed finances and deep contingency plans the team at Atmosleep is wide awake and aware of where your investment goes.
+        </p>
+    </div>
+    <div class="footer">
+        <div class="third" style="text-align: left">
+            <h4>Atmosleep</h4>
+        </div>
+        <div class="third" style="text-align: right; float: right;">
+            <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

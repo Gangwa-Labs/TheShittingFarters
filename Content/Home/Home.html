@@ -9,58 +9,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="../Style.css"> <!-- Why is this broken -->
-
+        <link rel="stylesheet" href="../Style.css">
+        <!-- <link rel="stylesheet" href="../Style.css"> --> <!-- Why is this broken -->
         <style>
             /* Site sections */
-            body {
-                font-family: 'Open Sans', sans-serif;
-                margin: 0px;
-            }
-            a {
-                text-decoration: none;
-                color: white;
-                opacity: 1;
-            }
-            a:hover {
-                opacity: .5;
-            }
-            h1 {
-                font-size: 38pt;
-                line-height: 41pt;
-            }
-            .nav {
-                background-image: url(Background\ Image\ 1.png);
-                position: fixed;
-                padding: 0% 2% 1% 2%;
-                width: 96%;
-                color: white;
-            }
-            .nav p {
-                font-size: 10pt;
-            }
-            .footer {
-                background-image: url(Background\ Image\ 1.png);
-                padding: 2%;
-                width: 96%;
-                color: white;
-                overflow: auto;
-            }
-            .footer p {
-                font-size: 10pt;
-                margin-top: 25px;
-            }
+            /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
 
-            /* Used to split the page into even sections */
-            /* Using floats, not flex boxes (for ease of implementation) */
-            .half {
-                width: 49%;
-                float: left;
-            }
-            .third {
-                width: 32%;
-                float: left;
-            }
 
             /* Site assets */
             .button {
@@ -76,7 +30,8 @@
             .button:hover{
                 opacity: .5;
             }
-            /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
+
+            /* The external CSS stylesheet still isn't working :( */
 
 
             /* The first purple block at the beginning of the page */
@@ -108,9 +63,12 @@
             }
             #featureoverview {
                 background-image: url(Background\ Image\ 2.png);
-                height: 380px;
+                height: 420px;
                 padding: 100px 50px 100px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
                 color: white;
+            }
+            #featureoverview .third {
+                margin-right: 8%;
             }
             #pillow2 {
                 width: 50%;
@@ -131,7 +89,63 @@
                 color: black;
                 opacity: 1;
             }
-            
+
+            @media only screen and (max-width: 1148px) {
+                h1 {
+                    font-size: 20pt;
+                    line-height: 1.1em;
+                }
+                p {
+                    font-size: 10pt;
+                }
+                .nav .third img {
+                    visibility: hidden;
+                }
+                #heroimage .third {
+                    width: 100%;
+                    float: none;
+                    text-align: center;
+                }
+                .button {
+                    margin: auto;
+                    margin-top: 20px;
+                }
+                #pillow1 {
+                    margin: 20px auto 20px auto;
+                    width: 60%;
+                    float: none;
+                }
+                #featureoverview .third {
+                    margin: -80px auto 20px auto;
+                    padding: 0px 10% 0px 10%;
+                    width: 80%;
+                    float: none;
+                    text-align: center;
+                }
+                #pillow2 {
+                    margin: -10px auto 20px auto;
+                    width: 55%;
+                    height: 80%;
+                    float: none;
+                }
+            }
+
+            @media only screen and (max-width: 675px) {
+                #heroimage {
+                    height: 450px;
+                }
+
+                #pillow1 {
+                    width: 80%;
+                }
+
+                #pillow2 {
+                    width: 80%
+                }
+                #featureoverview .third {
+                    margin-top: -140px;
+                }
+            }
         </style>
         <script>
 
@@ -165,9 +179,9 @@
                 <p>
                     You’ll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat it, too.
                 </p>
-                <div class="button">
+                <a href="../About Us/About_Us.html"><div class="button">
                     <p>Learn More</p>
-                </div>
+                </div></a>
             </div>
             <div id="pillow1"></div>
         </div>
@@ -182,23 +196,23 @@
         </div>
         <div id="featureoverview">
             <div id="pillow2"></div>
-            <div id="third" style="margin-left: 53%">
+            <div class="third" style="float: right">
                 <h1>An All-In-One Adaptvie AI Pillow</h1>
                 <p>
                     With adjustable plushness, LED lighting, embedded sleep analytics, a speaker system for your favorite music, meditations, and study tools …all activated through your voice. Atmos listens to your needs to allow for screen-free comfort as you lounge or prepare to sleep.
                 </p>
-                <div class="button">
+                <a href="../About Us/About_Us.html"><div class="button">
                     <p>Learn More</p>
-                </div>
+                </div></a>
             </div>
         </div>
         <div class="whitesection">
             <p>
                 We want to hear your thoughts! Help give us valuable feedback by completing the form below. We want to create a supporting community that will be first in line to receive our newest products.
             </p>
-            <div id="feedbackbutton">
+            <a><div id="feedbackbutton">
                 <p>Feedback Form</p>
-            </div>
+            </div></a>
         </div>
         <div class="footer">
             <div class="third" style="text-align: left">
