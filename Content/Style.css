@@ -1,1 +1,63 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+}
+a:hover {
+    opacity: .5;
+}
+h1 {
+    font-size: 38pt;
+    line-height: 41pt;
+}
+.nav {
+    background-image: url(Background\ Image\ 1.png);
+    position: fixed;
+    padding: 0% 2% 1% 2%;
+    width: 96%;
+    color: white;
+}
+.nav p {
+    font-size: 10pt;
+}
+.footer {
+    background-image: url(Background\ Image\ 1.png);
+    padding: 2%;
+    width: 96%;
+    color: white;
+    overflow: auto;
+}
+.footer p {
+    font-size: 10pt;
+    margin-top: 25px;
+}
 
+/* Used to split the page into even sections */
+/* Using floats, not flex boxes (for ease of implementation) */
+.half {
+    width: 49%;
+    float: left;
+}
+.third {
+    width: 32%;
+    float: left;
+}
+
+/* Site assets */
+.button {
+    margin-top: 30px;
+    padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    opacity: 1;
+}
+.button:hover{
+    opacity: .5;
+}
