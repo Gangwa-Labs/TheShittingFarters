@@ -112,6 +112,7 @@
         z-index: -1;
         width: auto;
         margin: 0;
+        flex-direction: column;
     }
 
     #infobox{
@@ -121,10 +122,40 @@
         margin: 0;
         height: auto;
         margin-top: 30vh;
+
     }
     #infobox img:hover{
         opacity: 0.5;
     }
+
+
+    @media only screen and (max-width: 600px) {
+  #maintext{
+      font-size: 10vh;
+  }
+  #mainbackground{
+      height: 50vh;
+  }
+#leftbackground{
+      height: 30vh;
+      width: 50vh;
+  }
+#rightbackground{
+      height: 30vh;
+      width: 50vh;
+      float: left;
+  }
+#mainpic1{
+    display: none;
+}
+#mainpic2{
+    display: none;
+}
+h1{
+    font-size: 3vh;
+}
+
+}
 
     </style>
 </head>
@@ -168,7 +199,7 @@
            "Built-in soft LED breathing light enhances the sense of technology while making your sleep more restful"
             </h1>
         </div>
-    <img src="led light.png" style="margin-top: 10%; margin-left: 2%; position:absolute; width: 70vh;z-index: 1;">
+    <img src="led light.png" id="mainpic1"style="margin-top: 10%; margin-left: 2%; position:absolute; width: 70vh;z-index: 1; ">
 </div>
 
 <br>
@@ -180,7 +211,7 @@
     </h1>
         </div>
 
-    <img src="fan.png"  style="margin-top: 20%; left:1%; position:absolute; width: 70vh; z-index: 1;">  
+    <img src="fan.png" id="mainpic2" style="margin-top: 20%; left:1%; position:absolute; width: 70vh; z-index: 1;">  
 </div>
 
 
