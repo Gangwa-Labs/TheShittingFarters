@@ -43,7 +43,7 @@
 
             /* The first purple block at the beginning of the page */
             #heroimage {
-                background-image: url(Background\ Image\ w\ girl.png);
+                background-image: url(Background\ Image\ 1.png);
                 height: 520px;
                 padding: 150px 50px 0px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
                 color: white;
@@ -73,6 +73,17 @@
                 text-align: center;
                 color: black;
                 opacity: 1;
+            }
+
+            .gp{
+                    width: 0%;
+                    visibility: hidden;
+            }
+
+            #grandparents{
+                float: left;
+                width: 200px;
+                margin-left: 10%;
             }
 
             @media only screen and (max-width: 1148px) {
@@ -106,6 +117,15 @@
                     float: none;
                     text-align: center;
                 }
+                #grandparents{
+                    width: 0%;
+                    visibility: hidden;
+                }
+                .gp{
+                    width: auto;
+                    visibility: visible;
+                    margin: auto;
+            }
             }
 
             @media only screen and (max-width: 675px) {
@@ -123,6 +143,10 @@
                 }
                 #featureoverview .third {
                     margin-top: -140px;
+                }
+                .gp{
+                    width: 0%;
+                    visibility: hidden;
                 }
             }
         </style>
@@ -158,12 +182,17 @@
             </div>
         </div>
         <div id="heroimage">
-            <div class="third" style="margin-left: 3%">
-                <h1>Our Market</h1>
+            <div class="third" style="margin-left:3%; float:left;">
+                <h1>Target Market</h1>
                 <p>
-                    We cater to young students studying their bio notes over night to grandparents falling asleep to their favorite opera.
+                    Atmosleep's target market includes consumers who value productivity, time management, and wellness. For those juggling various commitments, tension is abundant and time is scarce. Atmosleep targets individuals who want to maximize work time while maintaining time for sleep and self-care.
                 </p>
+                <img class="gp" src="children and granparents.png" alt="Grandparents">
                 </div></a>
+
+            <div id="grandparents">
+                <img src="children and granparents.png" alt="Grandparents">
+            </div>
             </div>
         <div class="whitesection">
             <div id="circle"></div>
