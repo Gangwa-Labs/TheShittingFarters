@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 
 <head>
@@ -9,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../Style.css">
 
 
     <style>
@@ -142,7 +142,42 @@
         #infobox img:hover {
             opacity: 0.5;
         }
+
+        #flexy {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+
+        .flexclass {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            width: 50vw;
+            height: 50vw;
+        }
+
+        #box1 {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+        }
+
+        #box2 {}
+
+        #box3 {
+            background-image: url("Background Image 1.png");
+            background-repeat: none;
+        }
+
+
+        #box4 {}
+
+        div {
+            /* border: 1px solid red; */
+        }
     </style>
+
 </head>
 
 <body>
@@ -200,8 +235,36 @@
         </div>
     </div>
 
-
-    <div class="contentbox">
+    <div id="flexy">
+        <div id="box1" class="flexclass">
+            <div class="middleMagic">
+                <h1>
+                    <br>
+                    "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
+                    restful"
+                </h1>
+            </div>
+        </div>
+        <div id="box2" class="flexclass">
+            <div class="middleMagic">
+                <img src="led light.png" style="width: 100%; z-index: 1;">
+            </div>
+        </div>
+        <div id="box4" class="flexclass">
+            <div class="middleMagic">
+                <img src="fan.png" style="width: 100%;z-index: 1;">
+            </div>
+        </div>
+        <div id="box3" class="flexclass">
+            <div class="middleMagic">
+                <h1>
+                    <br>
+                    "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="contentbox">
         <div id="leftbackground">
             <h1>
                 <br><br>
@@ -222,7 +285,7 @@
         </div>
 
         <img src="fan.png" style="margin-top: 20%; left:1%; position:absolute; width: 70vh; z-index: 1;">
-    </div>
+    </div> -->
 
 
 
