@@ -16,6 +16,7 @@
         background-image: url("Background Image 1.png");
         font-family: 'Open Sans', sans-serif;
         background-attachment: fixed;
+        background-repeat: no-repeat;
         padding: 10px;
         color:white
         }       
@@ -69,8 +70,46 @@
     top: 200px;
     font-size: 20pt;
 
+
   }
  
+  @media only screen and (max-width: 675px) {
+
+    body{
+      margin: 0px;
+    }
+    #description{
+    width: 200px;
+    font-size: 20px;
+    left: 10px;
+  }
+  #abouttitle{
+        font-weight: bold;
+        font-size: 50px;
+        position: fixed;
+        left: 300px;
+        top: 350px;
+     
+
+      }
+      img{
+          width:90px;
+          padding: 5px;
+          border-radius: 10px;
+                
+       }
+       #imagecontainer{
+      position: relative;
+      top: 500px;
+      left: 10px;
+    }
+    .description{
+        position: absolute;
+        left: 100px;
+        font-weight: bold;
+        font-size:10pt;
+      }
+      }
 
 
    </style>
@@ -92,36 +131,41 @@
 
 </div>
 <div id=imagecontainer>
-  <div id="Vivian Li">
+  <!-- <div id="Vivian Li"> -->
+
+  <div>
       <p class=description> Vivian Li <br> Programmer and Engineer</p>
       <img src="vivian.jpeg" alt="Vivian Li Headshot">
       
  
   </div>
-  <div id="Edward Chanquin">
+  <div>
+  <!-- <div id="Edward Chanquin"> -->
       <p class=description> Edward Chanquin <br> Programmer</p>
 
       <img src="edward.jpeg" alt="Edward Chanquin Headshot">
   
       
   </div>
-  <div id="Jack Crawford">
+  <div>
+  <!-- <div id="Jack Crawford"> -->
       <p class=description> Jack Crawford <br> Multimedia Designer</p>
 
       <img src="jack.jpeg" alt="Jack Crawford Head shot">
       
       
   </div>
-  <div id="Soph Shack">
-      <p class=description>Soph Shack <br> Outreach and Programming</p>
+  <div>
+  <!-- <div id="Soph Shack"> -->
+      <p class=description> Soph Shack <br> Outreach and Programming</p>
 
       <img src="soph.jpeg" alt="Soph Shack Head Shot">
      
       
   </div>
-  
-  <div id="Zander Tate">
-      <p class=description>  Zander Tate <br> UI/UX Designer</p>
+  <div>
+  <!-- <div id="Zander Tate"> -->
+      <p class=description> Zander Tate <br> UI/UX Designer</p>
       <img src="zander.jpeg" alt="Zander Tate">
      
   </div>
