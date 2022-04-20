@@ -1,180 +1,260 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
-   <!-- Importing Open Sans, an open source Google font -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-   <style>
-     body{
-        background-image: url("Background Image 1.png");
-        font-family: 'Open Sans', sans-serif;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        padding: 10px;
-        color:white
-        }       
-      #logo{
-        font-weight: bold;
-        color: white;
-        font-size: 15pt;
-        position: fixed;
+  <!-- Importing Open Sans, an open source Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Style.css"> <!-- Why is this broken -->
 
-      }
-      #logo:hover{
-        opacity: 50%;
+  <style>
+    .nav {
+      background-image: url("Background Image 1.png");
+    }
 
-      }
-      #abouttitle{
-        font-weight: bold;
-        font-size: 70px;
-        position: fixed;
-        left: 900px;
-        top: 350px;
-     
+    body {
+      background-image: url("Background Image 1.png");
+      font-family: 'Open Sans', sans-serif;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: white
+    }
 
-      }
-      img{
-          width:200px;
-          padding: 10px;
-          border-radius: 30px;
-                
-       }
-      img:hover{
-        opacity: 50%;
-      }
-    .description{
-        position: absolute;
-        left: 250px;
-        font-weight: bold;
-        font-size:15pt;
-      }
-   #imagecontainer{
+    #logo {
+      font-weight: bold;
+      color: white;
+      font-size: 15pt;
+      position: fixed;
+
+    }
+
+    #logo:hover {
+      opacity: 50%;
+
+    }
+
+    #abouttitle {
+      font-weight: bold;
+      font-size: 70px;
+      position: fixed;
+      left: 900px;
+      top: 350px;
+
+
+    }
+
+    #port {
+      width: 200px;
+      padding: 10px;
+      border-radius: 30px;
+
+    }
+
+    #port:hover {
+      opacity: 50%;
+    }
+
+    .description {
+      position: absolute;
+      left: 250px;
+      font-weight: bold;
+      font-size: 15pt;
+    }
+
+    #imagecontainer {
       position: relative;
       top: 500px;
       left: 200px;
     }
-  #description{
-    position: relative;
-    /* border: solid white 1px; */
-    padding: 20px;
-    width: 500px;
-    border-radius: 20px;
-    left: 200px;
-    top: 200px;
-    font-size: 20pt;
+
+    #description {
+      position: relative;
+      /* border: solid white 1px; */
+      padding: 20px;
+      width: 500px;
+      border-radius: 20px;
+      left: 200px;
+      top: 200px;
+      font-size: 20pt;
 
 
-  }
- 
-  @media only screen and (max-width: 675px) {
-
-    body{
-      margin: 0px;
     }
-    #description{
-    width: 200px;
-    font-size: 20px;
-    left: 10px;
-  }
-  #abouttitle{
+    @media only screen and (max-width: 1148px) {
+            #heroimage {
+                padding-top: 200px;
+            }
+            #navFlex{
+                flex-flow: column wrap;
+                height: 150px;
+            }
+            #navFlex a{
+                width: 50%;
+            }
+          }
+
+    @media only screen and (max-width: 675px) {
+
+
+      #description {
+        width: 200px;
+        font-size: 20px;
+        left: 10px;
+      }
+
+      #abouttitle {
         font-weight: bold;
         font-size: 50px;
         position: fixed;
         left: 300px;
         top: 350px;
-     
+
 
       }
-      img{
-          width:90px;
-          padding: 5px;
-          border-radius: 10px;
-                
-       }
-       #imagecontainer{
-      position: relative;
-      top: 500px;
-      left: 10px;
-    }
-    .description{
+
+      #port {
+        width: 90px;
+        padding: 5px;
+        border-radius: 10px;
+
+      }
+
+      #imagecontainer {
+        position: relative;
+        top: 500px;
+        left: 10px;
+      }
+
+      .description {
         position: absolute;
         left: 100px;
         font-weight: bold;
-        font-size:10pt;
-      }
+        font-size: 10pt;
       }
 
+      #navFlex {
+        flex-flow: column nowrap;
+        height: 300px;
+      }
 
-   </style>
+      #navFlex a {
+        width: 100%;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
-    
-<span id=logo>Atmosleep</span>
-<div id=abouttitle>
-  About Us
-</div>
-
-
-
-
-</div>
-<div id=description>
-  We are a team dedicated to being forward-thinking and innovative. While we are not working at Atmosleep we are hard at work on our own passion projects and pursuits! We are a team of driven and focused individuals that truly believe in our mission at Atmosleep.
-
-</div>
-<div id=imagecontainer>
-  <!-- <div id="Vivian Li"> -->
-
-  <div>
-      <p class=description> Vivian Li <br> Programmer and Engineer</p>
-      <img src="vivian.jpeg" alt="Vivian Li Headshot">
-      
- 
+  <div class="nav" style="z-index: 2;">
+    <div class="third" style="text-align: left">
+      <h3>Atmosleep</h3>
+    </div>
+    <div id="pageThird" class="third" style="text-align: center">
+      <div id="navFlex">
+        <a href="../Home/Home.html">
+          <div class="navChild">
+            <p>Home</p>
+          </div>
+        </a>
+        <a href="../About Us/About_Us.html">
+          <div class="navChild" style="border-bottom: 1px solid white;">
+            <p>About Us</p>
+          </div>
+        </a>
+        <a href="../Investors/problems/Problems_Solution.html">
+          <div class="navChild">
+            <p>Solutions</p>
+          </div>
+        </a>
+        <a href="../Investors/products/products.html">
+          <div class="navChild">
+            <p>Products</p>
+          </div>
+        </a>
+        <a href="../Investors/Finances/Finances.html">
+          <div class="navChild">
+            <p>Finances</p>
+          </div>
+        </a>
+        <a href="../Investors/Marketplace/marketplace.html">
+          <div class="navChild">
+            <p>Marketplace</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="third" style="text-align: right">
+      <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
+      <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
+    </div>
   </div>
-  <div>
-  <!-- <div id="Edward Chanquin"> -->
+  <div id=abouttitle>
+    About Us
+  </div>
+
+
+
+
+  </div>
+  <div id=description>
+    We are a team dedicated to being forward-thinking and innovative. While we are not working at Atmosleep we are hard
+    at work on our own passion projects and pursuits! We are a team of driven and focused individuals that truly believe
+    in our mission at Atmosleep.
+
+  </div>
+  <div id=imagecontainer>
+    <!-- <div id="Vivian Li"> -->
+
+    <div>
+      <p class=description> Vivian Li <br> Programmer and Engineer</p>
+      <img id="port" src="vivian.jpeg" alt="Vivian Li Headshot">
+
+
+    </div>
+    <div>
+      <!-- <div id="Edward Chanquin"> -->
       <p class=description> Edward Chanquin <br> Programmer</p>
 
-      <img src="edward.jpeg" alt="Edward Chanquin Headshot">
-  
-      
-  </div>
-  <div>
-  <!-- <div id="Jack Crawford"> -->
+      <img id="port" src="edward.jpeg" alt="Edward Chanquin Headshot">
+
+
+    </div>
+    <div>
+      <!-- <div id="Jack Crawford"> -->
       <p class=description> Jack Crawford <br> Multimedia Designer</p>
 
-      <img src="jack.jpeg" alt="Jack Crawford Head shot">
-      
-      
-  </div>
-  <div>
-  <!-- <div id="Soph Shack"> -->
+      <img id="port" src="jack.jpeg" alt="Jack Crawford Head shot">
+
+
+    </div>
+    <div>
+      <!-- <div id="Soph Shack"> -->
       <p class=description> Soph Shack <br> Outreach and Programming</p>
 
-      <img src="soph.jpeg" alt="Soph Shack Head Shot">
-     
-      
-  </div>
-  <div>
-  <!-- <div id="Zander Tate"> -->
+      <img id="port" src="soph.jpeg" alt="Soph Shack Head Shot">
+
+
+    </div>
+    <div>
+      <!-- <div id="Zander Tate"> -->
       <p class=description> Zander Tate <br> UI/UX Designer</p>
-      <img src="zander.jpeg" alt="Zander Tate">
-     
+      <img id="port" src="zander.jpeg" alt="Zander Tate">
+
+    </div>
   </div>
-</div>
-
-
-
-
-
-
+  <div class="footer" style="position:relative; bottom: -500px;">
+    <div class="third" style="text-align: left">
+      <h4>Atmosleep</h4>
+    </div>
+    <div class="third" style="text-align: right; float: right;">
+      <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+    </div>
+  </div>
 </body>
+
 </html>
