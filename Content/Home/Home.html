@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    
+
     <title>Home - Atmosleep</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -128,9 +128,6 @@
                 font-size: 10pt;
             }
 
-            .nav .third img {
-                visibility: hidden;
-            }
 
             #heroimage .third {
                 width: 100%;
@@ -163,10 +160,18 @@
                 height: 80%;
                 float: none;
             }
+            #navFlex{
+                flex-flow: column wrap;
+                height: 150px;
+            }
+            #navFlex a{
+                width: 50%;
+            }
         }
 
         @media only screen and (max-width: 675px) {
             #heroimage {
+                padding-top: 300px;
                 height: 450px;
             }
 
@@ -181,7 +186,16 @@
             #featureoverview .third {
                 margin-top: -140px;
             }
+            #navFlex{
+                flex-flow: column nowrap;
+                height: 300px;
+            }
+            #navFlex a{
+                width: 100%;
+            }
         }
+
+
     </style>
 </head>
 
@@ -191,8 +205,40 @@
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
-        <div class="third" style="text-align: center">
-            <a href="../Home/Home.html">
+        <div id= "pageThird"class="third" style="text-align: center">
+            <div id="navFlex">
+                <a href="../Home/Home.html">
+                    <div class="navChild" style="border-bottom: 1px solid white;">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="../About Us/About_Us.html">
+                    <div class="navChild">
+                        <p>About Us</p>
+                    </div>
+                </a>
+                <a href="../Investors/problems/Problems_Solution.html">
+                    <div class="navChild">
+                        <p>Solutions</p>
+                    </div>
+                </a>
+                <a href="../Investors/products/products.html">
+                    <div class="navChild">
+                        <p>Products</p>
+                    </div>
+                </a>
+                <a href="../Investors/Finances/Finances.html">
+                    <div class="navChild">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="../Investors/Marketplace/marketplace.html">
+                    <div class="navChild">
+                        <p>Marketplace</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="../Home/Home.html">
                 <div class="sixth" style="padding-top: 12px; border-bottom: 1px solid white;width: 15%;float: left;">
                     <p>Home</p>
                 </div>
@@ -221,7 +267,7 @@
                 <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Marketplace</p>
                 </div>
-            </a>
+            </a> -->
         </div>
         <div class="third" style="text-align: right">
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
@@ -267,7 +313,7 @@
                 music, meditations, and study tools …all activated through your voice. Atmos listens to your needs to
                 allow for screen-free comfort as you lounge or prepare to sleep.
             </p>
-            <a href="../About Us/About_Us.html">
+            <a href="../Investors/products/products.html">
                 <div class="button">
                     <p>Learn More</p>
                 </div>

@@ -163,18 +163,46 @@
             background-repeat: none;
         }
 
-        #box2 {}
 
         #box3 {
             background-image: url("Background Image 1.png");
             background-repeat: none;
         }
-
-
-        #box4 {}
-
-        div {
-            /* border: 1px solid red; */
+        @media only screen and (max-width: 1148px) {
+            #navFlex{
+                flex-flow: column wrap;
+                height: 150px;
+            }
+            #navFlex a{
+                width: 50%;
+            }
+            #flexy h1 {
+                font-size: 20pt;
+            }
+        }
+        @media only screen and (max-width: 675px) {
+            #navFlex{
+                flex-flow: column nowrap;
+                height: 300px;
+            }
+            #navFlex a{
+                width: 100%;
+            }
+            #flexy h1 {
+                font-size: 16pt;
+            }
+            #flexy{
+                flex-direction: column;
+            }
+            .flexclass{
+                width: 100vw;
+            }
+            #box3{
+                order: 3;
+            }
+            #box4{
+                order: 4;
+            }
         }
 
         @media only screen and (max-width: 700px) {
@@ -208,8 +236,40 @@
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
-        <div class="third" style="text-align: center;">
-            <a href="../../Home/Home.html">
+        <div id="pageThird" class="third" style="text-align: center;">
+            <div id="navFlex">
+                <a href="../../Home/Home.html">
+                    <div class="navChild">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="../../About Us/About_Us.html">
+                    <div class="navChild">
+                        <p>About Us</p>
+                    </div>
+                </a>
+                <a href="../problems/Problems_Solution.html">
+                    <div class="navChild">
+                        <p>Solutions</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="navChild" style="border-bottom: 1px solid white;">
+                        <p>Products</p>
+                    </div>
+                </a>
+                <a href="../Finances/Finances.html">
+                    <div class="navChild">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="../Marketplace/marketplace.html">
+                    <div class="navChild">
+                        <p>Marketplace</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="../../Home/Home.html">
                 <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Home</p>
                 </div>
@@ -238,7 +298,7 @@
                 <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Marketplace</p>
                 </div>
-            </a>
+            </a> -->
         </div>
         <div class="third" style="text-align: right">
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
