@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 
 <head>
@@ -9,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../Style.css">
 
 
     <style>
@@ -146,12 +146,16 @@
         #flexy {
             display: flex;
             flex-flow: row wrap;
+            text-align: center;
         }
 
         .flexclass {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-grow: 1;
-            width: 50%;
-            height: 50%;
+            width: 50vw;
+            height: 50vw;
         }
 
         #box1 {
@@ -159,16 +163,46 @@
             background-repeat: none;
         }
 
-        #box2 {}
 
         #box3 {
             background-image: url("Background Image 1.png");
             background-repeat: none;
         }
-
-        #box4 {}
-        div{
-            /* border: 1px solid red; */
+        @media only screen and (max-width: 1148px) {
+            #navFlex{
+                flex-flow: column wrap;
+                height: 150px;
+            }
+            #navFlex a{
+                width: 50%;
+            }
+            #flexy h1 {
+                font-size: 20pt;
+            }
+        }
+        @media only screen and (max-width: 675px) {
+            #navFlex{
+                flex-flow: column nowrap;
+                height: 300px;
+            }
+            #navFlex a{
+                width: 100%;
+            }
+            #flexy h1 {
+                font-size: 16pt;
+            }
+            #flexy{
+                flex-direction: column;
+            }
+            .flexclass{
+                width: 100vw;
+            }
+            #box3{
+                order: 3;
+            }
+            #box4{
+                order: 4;
+            }
         }
     </style>
 
@@ -179,8 +213,40 @@
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
-        <div class="third" style="text-align: center;">
-            <a href="../../Home/Home.html">
+        <div id="pageThird" class="third" style="text-align: center;">
+            <div id="navFlex">
+                <a href="../../Home/Home.html">
+                    <div class="navChild">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="../../About Us/About_Us.html">
+                    <div class="navChild">
+                        <p>About Us</p>
+                    </div>
+                </a>
+                <a href="../problems/Problems_Solution.html">
+                    <div class="navChild">
+                        <p>Solutions</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="navChild" style="border-bottom: 1px solid white;">
+                        <p>Products</p>
+                    </div>
+                </a>
+                <a href="../Finances/Finances.html">
+                    <div class="navChild">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="../Marketplace/marketplace.html">
+                    <div class="navChild">
+                        <p>Marketplace</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="../../Home/Home.html">
                 <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Home</p>
                 </div>
@@ -209,7 +275,7 @@
                 <div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Marketplace</p>
                 </div>
-            </a>
+            </a> -->
         </div>
         <div class="third" style="text-align: right">
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
@@ -229,21 +295,33 @@
         </div>
     </div>
 
-    <div id="flexy" style="width: 100%;">
+    <div id="flexy">
         <div id="box1" class="flexclass">
-            <h1>
-                <br>
-                "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
-                restful"
-            </h1>
+            <div class="middleMagic">
+                <h1>
+                    <br>
+                    "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
+                    restful"
+                </h1>
+            </div>
         </div>
-        <div id="box2" class="flexclass"><img src="led light.png" style="width: 100%; z-index: 1;"></div>
-        <div id="box4" class="flexclass"> <img src="fan.png" style="width: 100%;z-index: 1;"></div>
+        <div id="box2" class="flexclass">
+            <div class="middleMagic">
+                <img src="led light.png" style="width: 100%; z-index: 1;">
+            </div>
+        </div>
+        <div id="box4" class="flexclass">
+            <div class="middleMagic">
+                <img src="fan.png" style="width: 100%;z-index: 1;">
+            </div>
+        </div>
         <div id="box3" class="flexclass">
-            <h1>
-                <br>
-                "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
-            </h1>
+            <div class="middleMagic">
+                <h1>
+                    <br>
+                    "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
+                </h1>
+            </div>
         </div>
     </div>
     <!-- <div class="contentbox">

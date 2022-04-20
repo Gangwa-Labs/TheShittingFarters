@@ -67,3 +67,12 @@ h1 {
 .button:hover{
     opacity: .5;
 }
+#navFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.navChild {
+    flex-grow: 1;
+}
