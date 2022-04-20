@@ -1,165 +1,237 @@
 <html>
-    <head>
-        <title>Problems & Solutions - Atmosleep</title>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
+<head>
+    <title>Problems & Solutions - Atmosleep</title>
 
-        <!-- Importing Open Sans, an open source Google font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
-        <link rel="stylesheet" href="../../Style.css"> <!-- Why is this broken -->
+    <!-- Importing Open Sans, an open source Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        <style>
-            /* Site sections */
-            body {
-                font-family: 'Open Sans', sans-serif;
-                margin: 0px;
-            }
-            a {
-                text-decoration: none;
-                color: white;
-                opacity: 1;
-            }
-            a:hover {
-                opacity: .5;
-            }
+    <link rel="stylesheet" href="../../Style.css"> <!-- Why is this broken -->
+
+    <style>
+        /* Site sections */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            opacity: 1;
+        }
+
+        a:hover {
+            opacity: .5;
+        }
+
+        h1 {
+            font-size: 38pt;
+            line-height: 41pt;
+        }
+
+        .nav {
+            background-image: url(Background\ Image\ 1.png);
+            position: fixed;
+            padding: 0% 2% 1% 2%;
+            width: 96%;
+            color: white;
+        }
+
+        .nav p {
+            font-size: 10pt;
+        }
+
+        .footer {
+            background-image: url(Background\ Image\ 1.png);
+            padding: 2%;
+            width: 96%;
+            color: white;
+            overflow: auto;
+        }
+
+        .footer p {
+            font-size: 10pt;
+            margin-top: 25px;
+        }
+
+        /* Used to split the page into even sections */
+        /* Using floats, not flex boxes (for ease of implementation) */
+        .half {
+            width: 49%;
+            float: left;
+        }
+
+        .third {
+            width: 32%;
+            float: left;
+        }
+
+        /* Site assets */
+        .button {
+            margin-top: 30px;
+            padding: 3px 30px 3px 30px;
+            /* Making the left and right padding 30px, top and bottom 3px */
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 50px;
+            text-align: center;
+            color: white;
+            opacity: 1;
+        }
+
+        .button:hover {
+            opacity: .5;
+        }
+
+        /* The external CSS stylesheet still isn't working :( */
+
+        #heroimage {
+            background-image: url(Background\ Image\ 1.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 520px;
+            padding: 150px 50px 20px 50px;
+            /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
+            color: white;
+            overflow: auto;
+        }
+
+        #heroimage .third {
+            margin-left: 3%;
+        }
+
+        .whitesection {
+            margin: 80px 8% 80px 8%;
+            text-align: center;
+            overflow: auto;
+        }
+
+        #roundedrectangle {
+            width: 40%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #BFA1AD;
+            font-size: 30pt;
+            color: white;
+            border-radius: 80px;
+            float: left;
+        }
+
+        #text {
+            width: 50%;
+            float: right;
+        }
+
+        @media only screen and (max-width: 1148px) {
             h1 {
-                font-size: 38pt;
-                line-height: 41pt;
+                font-size: 20pt;
+                line-height: 1.1em;
             }
-            .nav {
-                background-image: url(Background\ Image\ 1.png);
-                position: fixed;
-                padding: 0% 2% 1% 2%;
-                width: 96%;
-                color: white;
-            }
-            .nav p {
+
+            p {
                 font-size: 10pt;
             }
-            .footer {
-                background-image: url(Background\ Image\ 1.png);
-                padding: 2%;
-                width: 96%;
-                color: white;
-                overflow: auto;
-            }
-            .footer p {
-                font-size: 10pt;
-                margin-top: 25px;
-            }
 
-            /* Used to split the page into even sections */
-            /* Using floats, not flex boxes (for ease of implementation) */
-            .half {
-                width: 49%;
-                float: left;
-            }
-            .third {
-                width: 32%;
-                float: left;
-            }
-
-            /* Site assets */
-            .button {
-                margin-top: 30px;
-                padding: 3px 30px 3px 30px; /* Making the left and right padding 30px, top and bottom 3px */
-                width: 100px;
-                border: 1px solid white;
-                border-radius: 50px;
-                text-align: center;
-                color: white;
-                opacity: 1;
-            }
-            .button:hover{
-                opacity: .5;
-            }
-
-            /* The external CSS stylesheet still isn't working :( */
 
             #heroimage {
-                background-image: url(Background\ Image\ 1.png);
-                background-size: 100%;
-                background-repeat: no-repeat;
-                height: 520px;
-                padding: 150px 50px 20px 50px; /* Making the left and right padding 50px, top and bottom 150px 0px respectively */
-                color: white;
-                overflow: auto;
+                padding-top: 200px;
+                background-image: url(Background\ Image\ 2.png);
+                height: 200px;
+                background-size: auto;
             }
+
             #heroimage .third {
-                margin-left: 3%;
-            }
-            .whitesection {
-                margin: 80px 8% 80px 8%;
+                margin: auto;
+                padding: 0px 10% 0px 10%;
+                width: 80%;
+                float: none;
                 text-align: center;
-                overflow: auto;
             }
+
             #roundedrectangle {
-                width: 40%;
-                padding-top: 30px;
-                padding-bottom: 30px;
-                background-color: #BFA1AD;
-                font-size: 30pt;
-                color: white;
-                border-radius: 80px;
-                float: left;
+                width: 84%;
+                margin: 0px 8% 20px 8%;
+                float: none;
+                font-size: 20pt;
             }
+
             #text {
+                float: none;
+                width: 80%;
+                margin: 30px 10% 0px 10%;
+            }
+
+            #navFlex {
+                flex-flow: column wrap;
+                height: 150px;
+            }
+
+            #navFlex a {
                 width: 50%;
-                float: right;
             }
-            @media only screen and (max-width: 1148px) {
-                h1 {
-                    font-size: 20pt;
-                    line-height: 1.1em;
-                }
-                p {
-                    font-size: 10pt;
-                }
-                .nav .third img {
-                    visibility: hidden;
-                }
-                #heroimage {
-                    background-image: url(Background\ Image\ 2.png);
-                    height: 200px;
-                    background-size: auto;
-                }
-                #heroimage .third {
-                    margin: auto;
-                    padding: 0px 10% 0px 10%;
-                    width: 80%;
-                    float: none;
-                    text-align: center;
-                }
-                #roundedrectangle {
-                    width: 84%;
-                    margin: 0px 8% 20px 8%;
-                    float: none;
-                    font-size: 20pt;
-                }
-                #text {
-                    float: none;
-                    width: 80%;
-                    margin: 30px 10% 0px 10%;
-                }
+        }
+
+        @media only screen and (max-width: 675px) {
+            #heroimage {
+                padding-top: 300px;
+                height: 250px;
             }
-            @media only screen and (max-width: 675px) {
-                #heroimage {
-                    height: 250px;
-                }
+            #navFlex{
+                flex-flow: column nowrap;
+                height: 300px;
             }
-        </style>
-    </head>
-    <body>
-        <div class="nav"style="z-index: 2;">
-            <div class="third" style="text-align: left">
-                <h3>Atmosleep</h3>
+            #navFlex a{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" style="z-index: 2;">
+        <div class="third" style="text-align: left">
+            <h3>Atmosleep</h3>
+        </div>
+        <div id="pageThird" class="third" style="text-align: center">
+            <div id="navFlex">
+                <a href="../../Home/Home.html">
+                    <div class="navChild">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="../../About Us/About_Us.html">
+                    <div class="navChild">
+                        <p>About Us</p>
+                    </div>
+                </a>
+                <a href="../problems/Problems_Solution.html">
+                    <div class="navChild" style="border-bottom: 1px solid white;">
+                        <p>Solutions</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="navChild">
+                        <p>Products</p>
+                    </div>
+                </a>
+                <a href="../Finances/Finances.html">
+                    <div class="navChild">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="../Marketplace/marketplace.html">
+                    <div class="navChild">
+                        <p>Marketplace</p>
+                    </div>
+                </a>
             </div>
-            <div class="third" style="text-align: center">
-                <a href="../../Home/Home.html"><div class="sixth" style="padding-top: 12px; width: 15%;float: left;">
+            <!-- <a href="../../Home/Home.html"><div class="sixth" style="padding-top: 12px; width: 15%;float: left;">
                     <p>Home</p>
                 </div></a>
                 <a href="../../About Us/About_Us.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
@@ -176,40 +248,49 @@
                 </div></a>
                 <a href="../Marketplace/marketplace.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                     <p>Marketplace</p>
-                </div></a>
-            </div>
-            <div class="third" style="text-align: right">
-                <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
-                <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
-            </div>
+                </div></a> -->
         </div>
-        <div id="heroimage">
-            <div class="third">
-                <h1>Our Problem & Solution</h1>
-                <p>
-                    In a world increasingly strapped for time, Atmosleep aims to remove the decision between sacrificing work or sacrificing sleep. Atmosleep hopes to create a product that relieves stress and promotes wellness.
-                </p>
-            </div>
+        <div class="third" style="text-align: right">
+            <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
+            <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
         </div>
-        <div class="whitesection">
-            <a href="../Marketplace/marketplace.html"><div id="roundedrectangle">
-                <strong>Target<br>Market</strong> 
-            </div></a>
+    </div>
+    <div id="heroimage">
+        <div class="third">
+            <h1>Our Problem & Solution</h1>
+            <p>
+                In a world increasingly strapped for time, Atmosleep aims to remove the decision between sacrificing
+                work or sacrificing sleep. Atmosleep hopes to create a product that relieves stress and promotes
+                wellness.
+            </p>
+        </div>
+    </div>
+    <div class="whitesection">
+        <a href="../Marketplace/marketplace.html">
+            <div id="roundedrectangle">
+                <strong>Target<br>Market</strong>
+            </div>
+        </a>
 
 
-            <div id="text">
-                <p>
-                    Atmosleep operates within the sleep wellness and learning industry. Atmosleep is addressing the customer job to be done of maximizing sleep and learning. Atmosleep’s product combines sleep and learning, situating it at the intersection of the sleep and learning industries. As the sleep learning industry is still relatively new, Atmosleep resides within a blue ocean because no other products directly address the job to be done of maximizing sleep and learning.
-                </p>
-            </div>
+        <div id="text">
+            <p>
+                Atmosleep operates within the sleep wellness and learning industry. Atmosleep is addressing the customer
+                job to be done of maximizing sleep and learning. Atmosleep’s product combines sleep and learning,
+                situating it at the intersection of the sleep and learning industries. As the sleep learning industry is
+                still relatively new, Atmosleep resides within a blue ocean because no other products directly address
+                the job to be done of maximizing sleep and learning.
+            </p>
         </div>
-        <div class="footer">
-            <div class="third" style="text-align: left">
-                <h4>Atmosleep</h4>
-            </div>
-            <div class="third" style="text-align: right; float: right;">
-                <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
-            </div>
+    </div>
+    <div class="footer">
+        <div class="third" style="text-align: left">
+            <h4>Atmosleep</h4>
         </div>
-    </body>
+        <div class="third" style="text-align: right; float: right;">
+            <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
 </html>

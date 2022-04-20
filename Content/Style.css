@@ -67,18 +67,12 @@ h1 {
 .button:hover{
     opacity: .5;
 }
-.button {
-    margin-top: 30px;
-    padding: 3px 30px 3px 30px;
-    /* Making the left and right padding 30px, top and bottom 3px */
-    width: 100px;
-    border: 1px solid white;
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    opacity: 1;
+#navFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
 }
 
-.button:hover {
-    opacity: .5;
+.navChild {
+    flex-grow: 1;
 }

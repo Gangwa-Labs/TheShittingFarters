@@ -15,7 +15,6 @@
     <!-- <link rel="stylesheet" href="../Style.css"> -->
     <!-- Why is this broken -->
     <style>
-        
         /* Site sections */
         body {
             font-family: 'Open Sans', sans-serif;
@@ -148,22 +147,51 @@
             background-repeat: no-repeat;
             float: left;
         }
-        #sheets{
+
+        #sheets {
             height: 45%;
             width: 50%;
             position: absolute;
             right: 5%;
         }
-        #contingency{
+
+        #contingency {
             padding-top: 100px;
             width: 85%;
             height: 60%;
             margin: auto;
         }
-        #whitetitle{
+
+        #whitetitle {
             float: right;
             margin: auto;
             padding-right: 10%;
+        }
+        @media only screen and (max-width: 1148px) {
+            #heroimage {
+                padding-top: 200px;
+            }
+            #navFlex{
+                flex-flow: column wrap;
+                height: 150px;
+            }
+            #navFlex a{
+                width: 50%;
+            }
+        }
+        
+        @media only screen and (max-width: 675px) {
+            #heroimage {
+                padding-top: 300px;
+                height: 600px;
+            }
+            #navFlex{
+                flex-flow: column nowrap;
+                height: 300px;
+            }
+            #navFlex a{
+                width: 100%;
+            }
         }
     </style>
     <script>
@@ -173,12 +201,44 @@
 
 <body>
     <!-- Navigation bar at the top of each page -->
-    <div class="nav"style="z-index: 2;">
+    <div class="nav" style="z-index: 2;">
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
-        <div class="third" style="text-align: center;">
-            <a href="../../Home/Home.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
+        <div id="pageThird" class="third" style="text-align: center;">
+            <div id="navFlex">
+                <a href="../../Home/Home.html">
+                    <div class="navChild" >
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="../../About Us/About_Us.html">
+                    <div class="navChild">
+                        <p>About Us</p>
+                    </div>
+                </a>
+                <a href="../problems/Problems_Solution.html">
+                    <div class="navChild">
+                        <p>Solutions</p>
+                    </div>
+                </a>
+                <a href="../products/products.html">
+                    <div class="navChild">
+                        <p>Products</p>
+                    </div>
+                </a>
+                <a href="../Finances/Finances.html">
+                    <div class="navChild" style="border-bottom: 1px solid white;">
+                        <p>Finances</p>
+                    </div>
+                </a>
+                <a href="../Marketplace/marketplace.html">
+                    <div class="navChild">
+                        <p>Marketplace</p>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="../../Home/Home.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                 <p>Home</p>
             </div></a>
             <a href="../../About Us/About_Us.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
@@ -195,7 +255,7 @@
             </div></a>
             <a href="../Marketplace/marketplace.html"><div class="sixth" style="padding-top: 12px;width: 15%;float: left;">
                 <p>Marketplace</p>
-            </div></a>
+            </div></a> -->
         </div>
         <div class="third" style="text-align: right">
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
@@ -210,16 +270,22 @@
                 Finances so simple that you could do them in your sleep. Learn how Atmosleep is leading the sleep market
                 with cutting edge Finances and smart accounting methods. </p>
         </div>
-        <div id="sheets"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvOSJpVkpT9jpPqwS_s290yeuj5VZpBMGj4yoVKaSkdIlolkTFUIjKGIkT9_Pueg/pubhtml?widget=true&amp;headers=false" style="height:100%;width:100%;" title="Fiances"></iframe></div>
+        <div id="sheets"><iframe
+                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvOSJpVkpT9jpPqwS_s290yeuj5VZpBMGj4yoVKaSkdIlolkTFUIjKGIkT9_Pueg/pubhtml?widget=true&amp;headers=false"
+                style="height:100%;width:100%;" title="Fiances"></iframe></div>
     </div>
     <div id="whitetitle">
         <h1>Contingency Plan</h1>
     </div>
-    <div id="contingency"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrLW1uJViEgyxmbFIgZ8IliChB5HSFGxsByDEKzNl3hePJ15QzTofywAxoG99-iw/pubhtml?widget=true&amp;headers=false" style="height:100%;width:100%;" title="Contingency Plan"></iframe></div>
+    <div id="contingency"><iframe
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrLW1uJViEgyxmbFIgZ8IliChB5HSFGxsByDEKzNl3hePJ15QzTofywAxoG99-iw/pubhtml?widget=true&amp;headers=false"
+            style="height:100%;width:100%;" title="Contingency Plan"></iframe></div>
     <div class="whitesection">
         <div id="circle"></div>
         <p>
-            Atmosleep knows feeling safe and sound in your investments is just as important as sleeping safe and sound! With detailed finances and deep contingency plans the team at Atmosleep is wide awake and aware of where your investment goes.
+            Atmosleep knows feeling safe and sound in your investments is just as important as sleeping safe and sound!
+            With detailed finances and deep contingency plans the team at Atmosleep is wide awake and aware of where
+            your investment goes.
         </p>
     </div>
     <div class="footer">
