@@ -16,6 +16,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0px;
+            background-color: black;
         }
 
         a {
@@ -64,6 +65,30 @@
             font-size: 3vh;
             line-height: 41pt;
             color: white;
+            text-align: center;
+            line-height: 130%;
+            font-weight: 300;
+        }
+        h6{
+            font-size: 3vh;
+            line-height: 41pt;
+            color: rgb(206, 180, 192);
+            text-align: center;
+            line-height: 130%;
+            font-weight: 300;
+        }
+        h4{
+            font-size: 3vh;
+            line-height: 41pt;
+            color:white;
+            text-align: center;
+            line-height: 130%;
+            font-weight: 300;
+        }
+        h5{
+            font-size: 3vh;
+            line-height: 41pt;
+            color:white;
             text-align: center;
             line-height: 130%;
             font-weight: 300;
@@ -167,15 +192,65 @@
         }
 
         #box1 {
-            background-image: url("Background Image 1.png");
+            background-image: url("iris.jpeg");
+            background-size:100%;
             background-repeat: none;
+        }
+        #box1:hover{
+            opacity: 0.8;
         }
 
 
+        #box2 {
+            background-image: url("Ezra.jpeg");
+            background-size:100%;
+            background-repeat: none;
+        }
+        #box2:hover{
+            opacity: 0.8;
+        }
         #box3 {
-            background-image: url("Background Image 1.png");
+            background-image: url("matt.jpeg");
+            background-size:100%;
             background-repeat: none;
         }
+        #box3:hover{
+            opacity: 0.8;
+        }
+        #box4 {
+            background-image: url("steven.jpeg");
+            background-size:100%;
+            background-repeat: none;
+        }
+        #box4:hover{
+            opacity: 0.8;
+        }
+        #box5 {
+            background-image: url("ellie.jpeg");
+            background-size:100%;
+            background-repeat: none;
+        }
+        #box5:hover{
+            opacity: 0.8;
+        }
+      .overlay{
+        font-size: 4vh;
+        line-height: 41pt;
+         color: white;
+         text-align: center;
+        line-height: 130%;
+         font-weight: 300;
+          opacity: 0;
+          height: 100%;
+          -webkit-transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+         transition: all 0.5s ease;
+      }
+      .overlay:hover{
+          opacity: 1;
+      }
+     
         @media only screen and (max-width: 1148px) {
             #navFlex{
                 flex-flow: column wrap;
@@ -216,6 +291,9 @@
             }
             #box4{
                 order: 4;
+            }
+            #box5{
+                order: 5;
             }
         }
 
@@ -378,7 +456,10 @@ display: block;
 }
 /*hamburger css end here*/
 
+
+
 </style>
+
 </head>
 
 <body>
@@ -427,30 +508,41 @@ display: block;
     <div id="flexy">
         <div id="box1" class="flexclass">
             <div class="middleMagic">
-                <h1>
-                    <br>
-                    "Built-in soft LED breathing light enhances the sense of technology while making your sleep more
-                    restful"
-                </h1>
+                <div class="overlay">
+                    gckgckugkucl
+                    </div>
+         
             </div>
         </div>
         <div id="box2" class="flexclass">
             <div class="middleMagic">
-                <img src="led light.png" style="width: 100%; z-index: 1;">
+                <div class="overlay">
+                    gckgckugkucl
+                    </div>
             </div>
         </div>
         <div id="box4" class="flexclass">
             <div class="middleMagic">
-                <img src="fan.png" style="width: 100%;z-index: 1;">
+                <div class="overlay">
+                    gckgckugkucl
+                    </div>
             </div>
         </div>
         <div id="box3" class="flexclass">
             <div class="middleMagic">
-                <h1>
-                    <br>
-                    "High quality speakers with precise acoustic design. Make sure you're not sleeping alone"
-                </h1>
+                <div class="overlay">
+                    gckgckugkucl
+                    </div>
             </div>
+        </div>
+            <br>
+            <div id="box5" class="flexclass">
+                <div class="middleMagic">
+                    <div class="overlay">
+                        gckgckugkucl
+                        </div>
+                </div>
+                
         </div>
     </div>
  
@@ -460,17 +552,7 @@ display: block;
 
 
 
-    <div id="infobox">
-        <img src="box1.png" alt="information pic" style="position: abosulte; width: 400px; top: 100px;">
-        <img src="box5.png" alt="information pic" style="position: abosulte; top: -100px; width: 400px;">
-        <br>
-        <img src="box2.png" alt="information pic" style="position: abosulte;  width: 400px;">
-        <img src="box3.png" alt="information pic" style="position: abosulte; width: 300px; margin-left: -60px;">
-        <img src="box4.png" alt="information pic"
-            style="position: abosulte; width: 285px; left:10vh; margin-top: -80px;margin-left: -90px;">
-    </div>
-    <br>
-    <br>
+
 
     <div class="footer">
         <!--footer starts here-->
