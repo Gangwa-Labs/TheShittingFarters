@@ -230,12 +230,17 @@
             background-size:100%;
             background-repeat: none;
         }
+        #box6 {
+            background-image: url("Background Image 1.png");
+            background-size:800%;
+            background-repeat: none;
+        }
         #box5:hover{
             opacity: 0.8;
         }
       .overlay{
         font-size: 4vh;
-        line-height: 41pt;
+        line-height: 20vh;
          color: white;
          text-align: center;
         line-height: 130%;
@@ -246,6 +251,7 @@
          -moz-transition: all 0.5s ease;
           -o-transition: all 0.5s ease;
          transition: all 0.5s ease;
+         margin-top: 100%;
       }
       .overlay:hover{
           opacity: 1;
@@ -265,7 +271,7 @@
         }
         @media only screen and (max-width: 675px) {
             #mainbackground{
-                padding-top: 300px;
+                padding-top: 20%;
             }
             #pill{
                 padding-top: 90px;
@@ -285,6 +291,13 @@
             }
             .flexclass{
                 width: 100vw;
+                height: 60vh;
+            }
+            #box1{
+                order:1;
+            }
+            #box2{
+                order:2;
             }
             #box3{
                 order: 3;
@@ -294,6 +307,9 @@
             }
             #box5{
                 order: 5;
+            }
+            #box6{
+                display: none;
             }
         }
 
@@ -509,7 +525,11 @@ display: block;
         <div id="box1" class="flexclass">
             <div class="middleMagic">
                 <div class="overlay">
-                    gckgckugkucl
+                    Iris Leung
+                    <br>
+                    Head of Website team
+                    <br>
+                    icleung@usc.edu
                     </div>
          
             </div>
@@ -517,21 +537,33 @@ display: block;
         <div id="box2" class="flexclass">
             <div class="middleMagic">
                 <div class="overlay">
-                    gckgckugkucl
+                    Ezra Bird
+                    <br>
+                    Website Engineer
+                    <br>
+                    ebird@usc.edu
                     </div>
             </div>
         </div>
         <div id="box4" class="flexclass">
             <div class="middleMagic">
                 <div class="overlay">
-                    gckgckugkucl
+                    Peiyi Sun
+                    <br>
+                   UI/UX Designer
+                    <br>
+                    peiyisun@usc.edu
                     </div>
             </div>
         </div>
         <div id="box3" class="flexclass">
             <div class="middleMagic">
                 <div class="overlay">
-                    gckgckugkucl
+                   Matthew Suri
+                    <br>
+                    Website Engineer
+                    <br>
+                    msuri@usc.edu
                     </div>
             </div>
         </div>
@@ -544,6 +576,12 @@ display: block;
                 </div>
                 
         </div>
+        <div id="box6" class="flexclass">
+            <div class="middleMagic">
+                
+            </div>
+            
+    </div>
     </div>
  
 
