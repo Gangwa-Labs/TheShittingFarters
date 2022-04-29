@@ -16,39 +16,6 @@
     <!-- Why is this broken -->
     <style>
         /* Site sections */
-        /* ^^Items that will be transferred to the global CSS sheet after it gets fixed :( */
-
-
-        /* Site assets */
-
-        .nav {
-            background-image: url("Background Image 1.png");
-        }
-
-        .button {
-            margin-top: 30px;
-            padding: 3px 30px 3px 30px;
-            /* Making the left and right padding 30px, top and bottom 3px */
-            width: 100px;
-            border: 1px solid white;
-            border-radius: 50px;
-            text-align: center;
-            color: white;
-            opacity: 1;
-        }
-
-        .button:hover {
-            opacity: .5;
-        }
-
-        .footer {
-            background-image: url("Background Image 1.png");
-            padding: 2%;
-            width: 96%;
-            color: white;
-            overflow: auto;
-        }
-
         /* The external CSS stylesheet still isn't working :( */
 
 
@@ -71,7 +38,12 @@
             float: right;
         }
 
-        .whitesection {
+        #whitesection1 {
+            margin: 80px 20% 80px 20%;
+            text-align: center;
+        }
+
+        #whitesection2 {
             margin: 80px 20% 80px 20%;
             text-align: center;
         }
@@ -117,6 +89,39 @@
             text-align: center;
             color: black;
             opacity: 1;
+        }
+
+        /* Party mode sticker CSS styles */
+
+        .sticker {
+            position: absolute;
+            width: 15%;
+        }
+        #sticker1 {
+            visibility: hidden;
+            top: 380px;
+            right: 45%;
+        }
+        #sticker2 {
+            visibility: hidden;
+            top: 120px;
+            right: 10%;
+        }
+        #sticker3 {
+            visibility: hidden;
+            width: 0px;
+            margin-top: -20px;
+            margin-bottom: 10px;
+        }
+        #sticker4 {
+            visibility: hidden;
+            top: 1490px;
+            left: 40%;
+        }
+        #sticker5 {
+            visibility: hidden;
+            top: 2040px;
+            left: 10%;
         }
 
         @media only screen and (max-width: 1148px) {
@@ -168,6 +173,12 @@
             #navFlex a{
                 width: 50%;
             }
+            .sticker {
+                width: 0px;
+            }
+            #sticker3 {
+                width: 0px;
+            }
         }
 
         @media only screen and (max-width: 675px) {
@@ -187,7 +198,7 @@
             #featureoverview .third {
                 margin-top: -140px;
             }
-            #navFlex{
+            #navFlex {
                 flex-flow: column nowrap;
                 height: 300px;
             }
@@ -238,11 +249,15 @@
                 </a>
             </div>
         </div>
+
+        <div class="third" style="text-align: right">
+            <img src="Party Mode.png" style="margin: 30px 8px 20px 8px" id="partymode">
+        </div>
         <!-- <div class="third" style="text-align: right">
-            <img src=
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
             <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
         </div> -->
+
     </div>
     <div id="animatedlogo">
         <img src="Atmosleep logo animation.gif" width="100%">
@@ -262,8 +277,9 @@
         </div>
         <div id="pillow1"></div>
     </div>
-    <div class="whitesection">
+    <div id="whitesection1">
         <div id="circle"></div>
+        <img src="Party Mode/Sticker 3.png" class="sticker" id="sticker3">
         <p>
             Atmosleep’s MVP1 consists of a pillow with a built-in speaker. The product will allow users to connect to a
             Bluetooth speaker and play materials such as meditation, podcasts, and lectures as they sleep. The comfort
@@ -293,7 +309,7 @@
             </a>
         </div>
     </div>
-    <div class="whitesection">
+    <div id="whitesection2">
         <p>
             We want to hear your thoughts! Help give us valuable feedback by completing the form below. We want to
             create a supporting community that will be first in line to receive our newest products.
@@ -313,12 +329,89 @@
         </div>
     </div>
 
+    <!-- Party mode stickers! -->
+    <img src="Party Mode/Sticker 1.png" class="sticker" id="sticker1">
+    <img src="Party Mode/Sticker 2.png" class="sticker" id="sticker2">
+    <img src="Party Mode/Sticker 4.png" class="sticker" id="sticker4">
+    <img src="Party Mode/Sticker 5.png" class="sticker" id="sticker5">
+
     <script>
         // if there isn't a cookie on the "mode" of the home screen, we will set it to default
         if(!localStorage.getItem("mode")){
             localStorage.setItem("mode", "default");
         }
 
+        document.querySelector("#partymode").addEventListener("click", function(){
+            
+            // if the user clicks on the party icon while on default mode, switches css to party mode
+            if(localStorage.getItem("mode") == "default"){
+                localStorage.setItem("mode", "party");
+
+                document.body.style.backgroundColor = "black";
+                document.querySelector("#sticker1").style.visibility = "visible";
+                document.querySelector("#sticker2").style.visibility = "visible";
+                document.querySelector("#sticker3").style.visibility = "visible";
+                document.querySelector("#sticker4").style.visibility = "visible";
+                document.querySelector("#sticker5").style.visibility = "visible";
+                
+                document.querySelector(".nav").style.backgroundImage = "none";
+                document.querySelector(".nav").style.backgroundColor = "black";
+
+                document.querySelector("#animatedlogo").style.position = "absolute";
+                document.querySelector("#animatedlogo").style.visibility = "hidden";
+
+                document.querySelector("#heroimage").style.backgroundImage = "none";
+
+                document.querySelector("#whitesection1").style.color = "white";
+                document.querySelector("#whitesection2").style.color = "white";
+
+                document.querySelector("#circle").style.backgroundColor = "black";
+
+                document.querySelector("#featureoverview").style.backgroundImage = "none";
+
+                document.querySelector("#feedbackbutton").style.border = "1px solid white";
+                document.querySelector("#feedbackbutton").style.color = "white";
+
+                document.querySelector(".footer").style.backgroundImage = "none";
+
+                document.querySelector("#sticker3").style.width = "190px";
+                document.querySelector("#sticker3").style.position = "relative";
+            }
+
+            else { // if the user clicks on the party icon while on party mode, switches css to default mode
+                localStorage.setItem("mode", "default");
+
+                document.body.style.backgroundColor = "white";
+                document.querySelector("#sticker1").style.visibility = "hidden";
+                document.querySelector("#sticker2").style.visibility = "hidden";
+                document.querySelector("#sticker3").style.visibility = "hidden";
+                document.querySelector("#sticker4").style.visibility = "hidden";
+                document.querySelector("#sticker5").style.visibility = "hidden";
+
+                document.querySelector(".nav").style.backgroundImage = "url('Background Image 1.png')";
+                document.querySelector(".nav").style.backgroundColor = "none";
+
+                document.querySelector("#animatedlogo").style.position = "relative";
+                document.querySelector("#animatedlogo").style.visibility = "visible";
+
+                document.querySelector("#heroimage").style.backgroundImage = "url('Background Image 1.png')";
+
+                document.querySelector("#whitesection1").style.color = "black";
+                document.querySelector("#whitesection2").style.color = "black";
+
+                document.querySelector("#circle").style.backgroundColor = "#BFA1AD";
+
+                document.querySelector("#featureoverview").style.backgroundImage = "url('Background Image 2.png')";
+
+                document.querySelector("#feedbackbutton").style.border = "1px solid black";
+                document.querySelector("#feedbackbutton").style.color = "black";
+
+                document.querySelector(".footer").style.backgroundImage = "url('Background Image 1.png')";
+
+                document.querySelector("#sticker3").style.width = "0px";
+                document.querySelector("#sticker3").style.position = "absolute";
+            }
+        })
     </script>
 
 </body>
