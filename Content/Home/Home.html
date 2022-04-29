@@ -341,6 +341,38 @@
             localStorage.setItem("mode", "default");
         }
 
+        if(localStorage.getItem("mode") == "party"){
+            document.body.style.backgroundColor = "black";
+            document.querySelector("#sticker1").style.visibility = "visible";
+            document.querySelector("#sticker2").style.visibility = "visible";
+            document.querySelector("#sticker3").style.visibility = "visible";
+            document.querySelector("#sticker4").style.visibility = "visible";
+            document.querySelector("#sticker5").style.visibility = "visible";
+                
+            document.querySelector(".nav").style.backgroundImage = "none";
+            document.querySelector(".nav").style.backgroundColor = "black";
+
+            document.querySelector("#animatedlogo").style.position = "absolute";
+            document.querySelector("#animatedlogo").style.visibility = "hidden";
+
+            document.querySelector("#heroimage").style.backgroundImage = "none";
+
+            document.querySelector("#whitesection1").style.color = "white";
+            document.querySelector("#whitesection2").style.color = "white";
+
+            document.querySelector("#circle").style.backgroundColor = "black";
+
+            document.querySelector("#featureoverview").style.backgroundImage = "none";
+
+            document.querySelector("#feedbackbutton").style.border = "1px solid white";
+            document.querySelector("#feedbackbutton").style.color = "white";
+
+            document.querySelector(".footer").style.backgroundImage = "none";
+
+            document.querySelector("#sticker3").style.width = "190px";
+            document.querySelector("#sticker3").style.position = "relative";
+        }
+
         document.querySelector("#partymode").addEventListener("click", function(){
             
             // if the user clicks on the party icon while on default mode, switches css to party mode
