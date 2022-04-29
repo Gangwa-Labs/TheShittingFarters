@@ -206,59 +206,184 @@
                 width: 100%;
             }
         }
+        /*hamburger css start here*/
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: purple;
+    padding: 0.25px;
+    transition: 0.3s;
+}
+.navigation{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3;
+    transition: 0.5s;
+}
+.menu li{
+    list-style-type: none;
+
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 40px 25px;
+    font-size: 18px;
+    line-height: 1;
+    transition: 0.3s;
+}
+.menu li a:hover{
+box-shadow: 0 -5px 0px #fff inset,
+500px 0 0 rbga(255,255,255,0.03) inset;
+padding: 35px 25px 45px 25px;
+}
+.hamburger{
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    top: 50px;
+    right: 10%;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 4;
+    transition: 0.3s;
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hamburger::before{
+    top:-10px;
+    width: 45px;
+
+}
+.hamburger::after{
+    top:-10px;
+    width: 45px;
+
+}
+
+.togggle-menu{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 30px;
+    right: 10%;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0;
+}
+.hamburger,
+.togggle-menu{
+display: none;
+}
+.navigation input:checked ~.hamburger{
+    background: transparent;
+}
+.navigation input:checked ~.hamburger:before{
+    top:0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+.navigation input:checked ~.hamburger:after{
+top: 0;
+transform: rotate(45deg);
+width: 30px;
+}
+.navigation input:checked~ .menu{
+    right: 0;
+    
+}
+@media screen and (max-width:3600px) {
+ .hamburger,
+.togggle-menu{
+display: block;
+}
+    .menu{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top:4.5vh;
+        right: -400px;
+        background: rgb(206, 180, 192);
+        width: 300px;
+        height: 100%;
+        padding-top: 65px;
+    }
+    .menu li{
+        width: 100%;    
+    }
+    .menu li a,
+    .menu li a:hover{
+        padding: 30px;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.3)
+        inset;
+    }
+}
+/*hamburger css end here*/
     </style>
 </head>
 
 <body>
-    <!-- Navigation bar at the top of each page -->
-    <div class="nav" style="z-index: 2;">
+
+
+    <!--hamburger start here-->
+    <div class="nav" style="z-index: 3;">
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
-        <div id= "pageThird"class="third" style="text-align: center">
-            <div id="navFlex">
-                <a href="../Home/Home.html">
-                    <div class="navChild" style="border-bottom: 1px solid white;">
-                        <p>Home</p>
-                    </div>
-                </a>
-                <a href="../About Us/About_Us.html">
-                    <div class="navChild">
-                        <p>About Us</p>
-                    </div>
-                </a>
-                <a href="../Investors/problems/Problems_Solution.html">
-                    <div class="navChild">
-                        <p>Solutions</p>
-                    </div>
-                </a>
-                <a href="../Investors/products/products.html">
-                    <div class="navChild">
-                        <p>Products</p>
-                    </div>
-                </a>
-                <a href="../Investors/Finances/Finances.html">
-                    <div class="navChild">
-                        <p>Finances</p>
-                    </div>
-                </a>
-                <a href="../Investors/Marketplace/marketplace.html">
-                    <div class="navChild">
-                        <p>Marketplace</p>
-                    </div>
-                </a>
+
+
+<div class="navigation">
+    
+   
+    <input type="checkbox" class="togggle-menu">
+    
+    <div class="hamburger"></div>
+        <ul class="menu">
+            <div class="third" style="text-align: 'left">
+                <img src="Party Mode.png" style= 'margin: 30px 8px 20px 8px' id="partymode">
             </div>
-        </div>
-
-        <div class="third" style="text-align: right">
-            <img src="Party Mode.png" style="margin: 30px 8px 20px 8px" id="partymode">
-        </div>
-        <!-- <div class="third" style="text-align: right">
-            <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
-            <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
-        </div> -->
-
+            <li><a href="../../Home/Home.html">Home</a></li>
+            <li><a href="../../About Us/About_Us.html">About us</a></li>
+            <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
+            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="../Finances/Finances.html">Finances</a></li>
+            <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
+            <li><a href="../Website story/website story.html">Website Story</a></li>
+            
+            </ul>
+       
+</div>
     </div>
+
+   <!--hamburger close here-->
+
+
+
+
+
+
+
     <div id="animatedlogo">
         <img src="Atmosleep logo animation.gif" width="100%">
     </div>
@@ -266,7 +391,7 @@
         <div class="third" style="margin-left: 3%">
             <h1>Achieve Your Dreams, Day And Night</h1>
             <p>
-                You’ll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat
+                You'll no longer need to choose between productivity, entertainment, and sleep—have your cake and eat
                 it, too.
             </p>
             <a href="../About Us/About_Us.html">
@@ -408,6 +533,8 @@
 
                 document.querySelector("#sticker3").style.width = "190px";
                 document.querySelector("#sticker3").style.position = "relative";
+
+                document.querySelector(".menu").style.backgroundColor = "black";
             }
 
             else { // if the user clicks on the party icon while on party mode, switches css to default mode
@@ -442,6 +569,8 @@
 
                 document.querySelector("#sticker3").style.width = "0px";
                 document.querySelector("#sticker3").style.position = "absolute";
+
+                document.querySelector(".menu").style.backgroundColor = " rgb(206, 180, 192)";
             }
         })
     </script>
