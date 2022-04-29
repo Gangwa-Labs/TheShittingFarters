@@ -195,8 +195,6 @@
                 width: 100%;
             }
         }
-
-
     </style>
 </head>
 
@@ -241,6 +239,7 @@
             </div>
         </div>
         <!-- <div class="third" style="text-align: right">
+            <img src=
             <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
             <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
         </div> -->
@@ -313,6 +312,15 @@
             <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        // if there isn't a cookie on the "mode" of the home screen, we will set it to default
+        if(!localStorage.getItem("mode")){
+            localStorage.setItem("mode", "default");
+        }
+
+    </script>
+
 </body>
 
 </html>
