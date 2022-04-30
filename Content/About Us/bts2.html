@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   
+        #slides {
+            display: none
+        }
+          
+        #slides .slidesjs-navigation {
+            margin-top: 3px;
+        }
+          
+        #slides .slidesjs-previous {
+            margin-right: 5px;
+            float: left;
+        }
+          
+        #slides .slidesjs-next {
+            margin-right: 5px;
+            float: left;
+        }
+          
+        .slidesjs-pagination {
+            margin: 6px 0 0;
+            float: right;
+            list-style: none;
+        }
+          
+        .slidesjs-pagination li {
+            float: left;
+            margin: 0 1px;
+        }
+          
+        .slidesjs-pagination li a {
+            display: block;
+            width: 13px;
+            height: 0;
+            padding-top: 13px;
+            background-image: url(
+https://media.geeksforgeeks.org/wp-content/uploads/20201213110552/logo.png);
+            background-position: 0 0;
+            float: left;
+            overflow: hidden;
+        }
+          
+        .slidesjs-pagination li a.active,
+        .slidesjs-pagination li a:hover.active {
+            background-position: 0 -13px
+        }
+          
+        .slidesjs-pagination li a:hover {
+            background-position: 0 -26px
+        }
+          
+        #slides a:link,
+        #slides a:visited {
+            color: #333
+        }
+          
+        #slides a:hover,
+        #slides a:active {
+            color: #9e2020
+        }
+          
+        .navbar {
+            overflow: hidden
+        }
+     body{
+      background-image: url("Background Image 1.png");
+        font-family: 'Open Sans', sans-serif;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        padding: 10px;
+        color:white
+    }
+    #logo{
+        font-weight: bold;
+        color: white;
+        font-size: 15pt;
+        position: fixed;
+
+      }
+      #logo:hover{
+        opacity: 50%;
+      }
+      #title{
+        font-weight: bold;
+        position: relative;
+        margin-left: 190px;
+        margin-top: 130px;
+        font-size:50pt;
+  
+      }
+        #slides {
+            display: none;
+            
+        }
+          
+        .container {
+            margin: 0 auto;
+
+            
+        }
+        a{
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 20pt;
+        }
+        a:hover{
+          color: rgb(98, 65, 71);
+          text-decoration: none;
+        }
+        
+        /* For tablets & smart phones */
+          
+        @media (max-width: 767px) {
+            body {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .container {
+                width: auto
+            }
+        }
+        /* For smartphones */
+          
+        @media (max-width: 480px) {
+            .container {
+                width: auto
+            }
+        }
+        /* For smaller displays like laptops */
+          
+        @media (min-width: 768px) and (max-width: 979px) {
+            .container {
+                width: 724px
+            }
+        }
+        /* For larger displays */
+          
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px
+            }
+        }
+        
+    
+  </style>
+</head>
+<body>
+  <span id=logo>Atmosleep</span>
+  <div id=title>
+    Behind The Scenes of Our Team!
+  </div>
+  <div class="container">
+    <div id="slides">
+        <img src="team.jpg"
+             alt="">
+        <img src="mask.jpg" 
+             alt="" 
+             style="size:20px">
+        <img src="zoomjack.jpg" 
+             alt="">
+        <img src="sophselfie.jpg" 
+             alt="">
+        <img src="jackhead.jpg" 
+             alt="">
+
+        <!-- <a href="#" class="slidesjs-next slidesjs-navigation">
+            <i class="fa fa-chevron-circle-left"></i></a>
+        <a href="#" class="slidesjs-previous slidesjs-navigation">
+            <i class="fa fa-chevron-circle-right"></i></a> -->
+    </div>
+</div>
+<!-- End SlidesJS Required: Start Slides -->
+
+<!-- SlidesJS Required: Link to jQuery -->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js">
+  </script>
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Link to jquery.slides.js -->
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.js">
+</script>
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+<script>
+    $(function() {
+        $('#slides').slidesjs({
+            width: 740,
+            height: 328,
+            navigation: false
+        });
+    });
+</script>
+<!-- End SlidesJS Required -->
+
+  
+</body>
+</html>
