@@ -260,18 +260,17 @@
 
             var tax = function(){
                 RATE = 0.095;
-                document.querySelector("#tax").value = document.querySelector("#subt").value * RATE;
+                document.querySelector("#tax").value = parseFloat(document.querySelector("#subt").value) * RATE;
             }
 
-            var total = function(){
-                document.querySelector("#total").value = document.querySelector("#subt").value + document.querySelector("#tax").value;
-                alert("testing");
+            var totalcost = function(){
+                document.querySelector("#total").value = parseFloat(document.querySelector("#subt").value) + parseFloat(document.querySelector("#tax").value);
             }
 
             document.querySelector("input[value='calculate']").addEventListener("click", function(){
                 subtotal();
                 tax();
-                total();
+                totalcost();
             })
 
             $(document).ready(function(){
