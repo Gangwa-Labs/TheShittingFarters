@@ -1,0 +1,755 @@
+<html>
+
+<head>
+    <title>
+        Quiz
+    </title>
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-size: 32pt;
+            line-height: unset;
+        }
+        div {
+            /* border: 1px solid red; */
+        }
+
+        html {
+            font-family: 'Open Sans';
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            overscroll-behavior: none;
+        }
+
+        hr {
+            height: 20px;
+            background-color: #CFB1BD;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #container {
+
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        #quizSide {
+            display: flex;
+            width: 50%;
+            flex-grow: 1;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: space-around;
+            background-image: url("purp_back.png");
+            background-repeat: no-repeat;
+        }
+
+        #quizCaption {
+            text-align: center;
+            width: fit-content;
+            color: white;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        #quizContent {
+            background-color: white;
+            border-radius: 75px;
+            width: 80%;
+            height: 40%;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        #quizCaption h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+        #quizCaption h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0px;
+        }
+
+        #answer1 {
+            border-top-left-radius: 75px;
+            border-bottom-left-radius: 75px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #answer2 {
+            border-left: 15px solid #CFB1BD;
+            border-right: 15px solid #CFB1BD;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #answer3 {
+            border-top-right-radius: 75px;
+            border-bottom-right-radius: 75px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .answer {
+            flex-grow: 1;
+            text-align: center;
+            width: 33%;
+            color: rgba(207, 177, 189, 1.0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+        }
+
+        .icon {
+            height: 80%;
+            width: 80%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 75px;
+            position: relative;
+        }
+
+        #quizNav {
+            display: flex;
+            width: 60%;
+            flex-flow: row nowrap;
+            height: 10%;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .option {
+            position: relative;
+            height: fit-content;
+            padding: 10px;
+        }
+
+        .option h1 {
+            margin: 0;
+        }
+
+        .quizNav {
+            background-image: url("nav.png");
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .outerCircle {
+            border: 10px solid white;
+            border-radius: 50px;
+            height: 75px;
+            flex: 0 0 75px;
+            display: none;
+        }
+
+        #factSide {
+            height: 100%;
+            width: 50%;
+            flex-grow: 1;
+            color: rgb(207, 177, 189);
+        }
+
+        #factCount {
+            font-size: 40px;
+            text-align: center;
+            width: 50%;
+            margin: 25% auto 5%;
+        }
+
+        #factCount p {
+            margin: 0px;
+        }
+
+        #factDisplay {
+            font-size: 60px;
+            text-align: center;
+            width: 75%;
+            margin: auto;
+        }
+
+        #factDisplay p {
+            margin: 0px;
+        }
+
+        #buy1 {
+            border-bottom-left-radius: 100px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #buy2 {
+            border-radius: 15px;
+        }
+
+        #buy3 {
+            border-bottom-right-radius: 100px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .buy {
+            border: 5pt solid rgb(207, 177, 189);
+            height: fit-content;
+            border-radius: 25px;
+            width: 80%;
+            position: relative;
+            bottom: -80px;
+            display: none;
+        }
+
+        .buy:hover {
+            opacity: 0.5;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: purple;
+            padding: 0.25px;
+            transition: 0.3s;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            z-index: 99;
+            transition: 0.5s;
+        }
+
+        .menu li {
+            list-style-type: none;
+
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 40px 25px;
+            font-size: 18px;
+            line-height: 1;
+            transition: 0.3s;
+        }
+
+        .menu li a:hover {
+            box-shadow: 0 -5px 0px #fff inset,
+                500px 0 0 rbga(255, 255, 255, 0.03) inset;
+            padding: 35px 25px 45px 25px;
+        }
+
+        .hamburger {
+            position: absolute;
+            width: 30px;
+            height: 4px;
+            top: 50px;
+            right: 10%;
+            background: #CFB1BD;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 4;
+            transition: 0.3s;
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            right: 0;
+            background: #CFB1BD;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .hamburger::before {
+            top: -10px;
+            width: 45px;
+
+        }
+
+        .hamburger::after {
+            top: -10px;
+            width: 45px;
+
+        }
+
+        .togggle-menu {
+            position: absolute;
+            width: 50px;
+            height: 100%;
+            top: 30px;
+            right: 10%;
+            z-index: 5;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .hamburger,
+        .togggle-menu {
+            display: none;
+        }
+
+        .navigation input:checked~.hamburger {
+            background: transparent;
+        }
+
+        .navigation input:checked~.hamburger:before {
+            top: 0;
+            transform: rotate(-45deg);
+            width: 30px;
+        }
+
+        .navigation input:checked~.hamburger:after {
+            top: 0;
+            transform: rotate(45deg);
+            width: 30px;
+        }
+
+        .navigation input:checked~.menu {
+            right: 0;
+
+        }
+
+        @media screen and (max-width:3600px) {
+
+            .hamburger,
+            .togggle-menu {
+                display: block;
+            }
+
+            .menu {
+                justify-content: start;
+                flex-direction: column;
+                align-items: center;
+                position: fixed;
+                top: 4.5vh;
+                right: -400px;
+                background: rgb(206, 180, 192);
+                width: 300px;
+                height: 100%;
+                padding-top: 65px;
+            }
+
+            .menu li {
+                width: 100%;
+            }
+
+            .menu li a,
+            .menu li a:hover {
+                padding: 30px;
+                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+            }
+        }
+
+        /*hamburger css end here*/
+        .footer {
+            margin: 0px;
+            padding-bottom: 2px;
+            height: 60px;
+            position: absolute;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--hamburger start here-->
+    <div class="nav" style="z-index: 99;">
+        <div class="third" style="text-align: left">
+            <h3>Atmosleep</h3>
+        </div>
+
+
+        <div class="navigation">
+
+
+            <input type="checkbox" class="togggle-menu" style="color:#CFB1BD;">
+
+            <div class="hamburger"></div>
+            <ul class="menu">
+                <li><a href="../Home/Home.html">Home</a></li>
+                <li><a href="../About Us/About_Us.html">About us</a></li>
+                <li><a href="../Investors/problems/Problems_Solution.html">Solutions</a></li>
+                <li><a href="../Investors/products/products.html">Products</a></li>
+                <li><a href="../Investors/Finances/Finances.html">Finances</a></li>
+                <li><a href="../Investors/Marketplace/marketplace.html">Marketplace</a></li>
+                <li><a href="../Investors/Website story/website story.html">Website Story</a></li>
+                <li><a href="../Investors/Ask Page/ask.html">Website Story</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!--hamburger close here-->
+
+    <div id="container">
+        <div id="quizSide">
+            <div id="quizCaption">
+            </div>
+            <div id="quizContent">
+                <div id="answer1" class="answer">
+                    <div id="option1" class="option"></div>
+                    <div id="icon1" class="icon"></div>
+                    <div id="buy1" class="buy"></div>
+                </div>
+                <div id="answer2" class="answer">
+                    <div id="option2" class="option"></div>
+                    <div id="icon2" class="icon"></div>
+                    <div id="buy2" class="buy"></div>
+                </div>
+                <div id="answer3" class="answer">
+                    <div id="option3" class="option"></div>
+                    <div id="icon3" class="icon"></div>
+                    <div id="buy3" class="buy"></div>
+                </div>
+            </div>
+            <div id="quizNav">
+                <div id="nav1" class="quizNav">
+                    <div class="outerCircle"></div>
+                </div>
+                <div id="nav2" class="quizNav">
+                    <div class="outerCircle"></div>
+                </div>
+                <div id="nav3" class="quizNav">
+                    <div class="outerCircle"></div>
+                </div>
+                <div id="nav4" class="quizNav">
+                    <div class="outerCircle"></div>
+                </div>
+                <div id="nav5" class="quizNav">
+                    <div class="outerCircle"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="factSide">
+            <div id="factCount">
+            </div>
+            <div id="factDisplay">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="third" style="text-align: left;">
+            <h4>Atmosleep</h4>
+        </div>
+        <div class="third" style="text-align: right; float: right;  color: #CFB1BD;">
+            <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var questions = [
+            {
+                "title": "Pillow Weight",
+                "caption": "How Heavy do you like your pillow?",
+                "q1Title": "Light",
+                "1score":
+                {
+                    "p1": "2",
+                    "p2": "-3",
+                    "p3": "-1"
+                },
+                "q1Icon": "url('Pillow_Weight/feather.svg')",
+                "q2Title": "Medium",
+                "2score":
+                {
+                    "p1": "-1",
+                    "p2": "1",
+                    "p3": "2"
+                },
+                "q2Icon": "url('Pillow_Weight/scale.svg')",
+                "q3Title": "Heavy",
+                "3score":
+                {
+                    "p1": "-3",
+                    "p2": "3",
+                    "p3": "1"
+                },
+                "q3Icon": "url('Pillow_Weight/heavy.svg')"
+
+            },
+            {
+                "title": "Pillow Firmness",
+                "caption": "How firm do you like your pillow?",
+                "q1Title": "Soft",
+                "1score":
+                {
+                    "p1": "3",
+                    "p2": "-2",
+                    "p3": "2"
+                },
+                "q1Icon": "url('Pillow_Firmness/soft.svg')",
+                "q2Title": "Medium",
+                "2score":
+                {
+                    "p1": "-2",
+                    "p2": "1",
+                    "p3": "3"
+                },
+                "q2Icon": "url('Pillow_Firmness/medium.svg')",
+                "q3Title": "Firm",
+                "3score":
+                {
+                    "p1": "-2",
+                    "p2": "2",
+                    "p3": "-1"
+                },
+                "q3Icon": "url('Pillow_Firmness/hard.svg')"
+            },
+            {
+                "title": "Sleeping Temperature",
+                "caption": "What temperature is the most comfortable?",
+                "q1Title": "Cool",
+                "1score":
+                {
+                    "p1": "2",
+                    "p2": "-1",
+                    "p3": "1"
+                },
+                "q1Icon": "url('Sleeping_Temperature/cool.svg')",
+                "q2Title": "Ambient",
+                "2score":
+                {
+                    "p1": "1",
+                    "p2": "-1",
+                    "p3": "2"
+                },
+                "q2Icon": "url('Sleeping_Temperature/ambient.svg')",
+                "q3Title": "Warm",
+                "3score":
+                {
+                    "p1": "-2",
+                    "p2": "3",
+                    "p3": "1"
+                },
+                "q3Icon": "url('Sleeping_Temperature/warm.svg')"
+            },
+            {
+                "title": "Sleeping Position",
+                "caption": "What position is the most comfortable?",
+                "q1Title": "Back",
+                "1score":
+                {
+                    "p1": "-2",
+                    "p2": "3",
+                    "p3": "2"
+                },
+                "q1Icon": "url('Sleeping_Position/back.svg')",
+                "q2Title": "Side",
+                "2score":
+                {
+                    "p1": "-3",
+                    "p2": "3",
+                    "p3": "2"
+                },
+                "q2Icon": "url('Sleeping_Position/side.svg')",
+                "q3Title": "Stomach",
+                "3score":
+                {
+                    "p1": "3",
+                    "p2": "-3",
+                    "p3": "3"
+                },
+                "q3Icon": "url('Sleeping_Position/front.svg')"
+            },
+            {
+                "title": "Sleeping Partners",
+                "caption": "Do you sleep with others?",
+                "q1Title": "Single",
+                "1score":
+                {
+                    "p1": "2",
+                    "p2": "2",
+                    "p3": "2"
+                },
+                "q1Icon": "url('Sleeping_Partners/single.svg')",
+                "q2Title": "Partner",
+                "2score":
+                {
+                    "p1": "-2",
+                    "p2": "0",
+                    "p3": "3"
+                },
+                "q2Icon": "url('Sleeping_Partners/partner.svg')",
+                "q3Title": "Pets",
+                "3score":
+                {
+                    "p1": "2",
+                    "p2": "2",
+                    "p3": "2"
+                },
+                "q3Icon": "url('Sleeping_Partners/pets.svg')"
+            }
+        ]
+        var sleepFact = ["A giraffe only needs 1.9 hours of sleep a day, whereas a brown bat needs 19.9 hours a day",
+            "Humans spend 1/3 of their life sleeping",
+            "The record for the longest period without sleep is 11 days",
+            "It’s not uncommon for deaf people to use sign language in their sleep",
+            "Dysania is the state of finding it hard to get out of bed in the morning",
+            "Parasomnia is a term that refers to unnatural movements during your sleep",
+            "The sensation of falling when half asleep and jerking yourself awake is called ‘hypnic jerks’",
+            "It’s thought that up to 15% of the population are sleepwalkers",
+            "1 in 4 married couples sleep in separate beds",
+            "Sleep deprivation will kill you more quickly than food deprivation",
+            "Those born blind experience dreams involving things such as emotion, sound and smell rather than sight",
+            "Within 5 minutes of waking up, 50% of your dream is forgotten",
+            "Pain tolerance is reduced by sleep deprivation",
+            "41% of the British population sleep in the foetal position",
+            "Sleep experts have discovered a direct link between people’s favourite sleeping positions and their personalities",
+            "Ideally, falling asleep at night should take you 10-15 minutes",
+            "Humans are the only mammals that willingly delay sleep",
+            "Sleeping on your front can aid digestion",
+            "High earners ($80 – $95,000) get the best sleep",
+            "Fear is said not to be the main emotion in nightmares",
+            "It’s impossible to sneeze while sleeping.",
+            "You can only dream about faces you have already seen.",
+            "Humans spend an average of 6 years of their life dreaming.",
+            "If you are snoring, you are not dreaming",
+            "8% of Americans sleep naked",
+            "Some car rental contracts make you promise not to drive on fewer than 6 hours of sleep.",
+            "Somniphobia is the fear of falling asleep.",
+            "The perfect nap, according to NASA, lasts for 26 minutes.",
+            "12% of people dream entirely in black and white",
+            "Two thirds of a cat’s life is spent asleep"];
+        var questionNumber = 0;
+        var scores = [0, 0, 0];
+        var selection = [];
+        // document.querySelector("#icon1").style.backgroundImage = questions[0]["q1Icon"];
+        var pageLoad = function (pageNum) {
+            var fact = Math.floor(Math.random() * (sleepFact.length));
+            $("#factCount").html("<p>Sleep Fact <strong>" + fact + "</strong></p>");
+            $("#factDisplay").html("<p>" + sleepFact[fact] + "</p>");
+            $(".outerCircle").css("display", "none");
+            document.querySelector("#quizCaption").innerHTML = "<h1>" + questions[pageNum].title + "</h1> <h2>" + questions[pageNum].caption + "</h2>";
+            nav = "#nav" + (parseFloat(pageNum) + 1);
+            $(nav).children().toggle();
+            for (var i = 1; i <= 3; i++) {
+                answer = "#answer" + i;
+                option = "#option" + i;
+                icon = "#icon" + i;
+                $(option).html("<h1>" + questions[pageNum]["q" + i + "Title"] + "</h1>");
+                $(icon).css("backgroundImage", questions[pageNum]["q" + i + "Icon"]);
+
+            }
+        }
+        var weights = function (questionNum, choice) {
+            for (var i = 0; i < 3; i++) {
+                scores[i] += parseFloat(questions[questionNum][choice]["p" + (i + 1)]);
+            }
+        }
+        var product = function (soft, hard, moldable) {
+            var rank = [soft, hard, moldable];
+            var rank2 = [soft, hard, moldable];
+            var name = ["Cirrus", "Cumulus", "Stratus"];
+            rank.sort((a, b) => b - a);
+            document.querySelector("#quizCaption").innerHTML = "<h1>Your Cloud Formation</h1><h2>personalized pillows for maximum comfort, you'll thank us on the first night</h2>";
+            $(".outerCircle").css("display", "none");
+            $(".icon").toggle();
+            $(".buy").toggle();
+            for (var i = 0; i < 3; i++) {
+                for (var a = 0; a < 3; a++) {
+                    if (rank[i] == rank2[a]) {
+                        document.querySelector("#option" + (i + 1)).innerHTML = "<h1>" + name[a] + "</h1>" + "<h2>" + rank[i] + "</h2>";
+                        if (i == 0) {
+                            $("#factDisplay").html("<p>The <strong>" + name[a] + "</strong> with a confidence of: <h1 style='font-size: 70;'><strong>" + rank[i] + "</strong></h1></p>");
+                        }
+                    }
+                }
+                document.querySelector("#buy" + (i + 1)).innerHTML = "<p>add</p>";
+            };
+            $("#factCount").html("Your Winning AtmoCloud");
+            console.log(name);
+            console.log(rank);
+        }
+        pageLoad(questionNumber);
+        $(".answer").on("mouseover", function () {
+            if (questionNumber < 5) {
+                $(this).children(".option").css("opacity", "0.5").css("top", "5");
+                $(this).children(".icon").css("opacity", "0.5").css("top", "5");
+            }
+        })
+        $(".answer").on("mouseout", function () {
+            $(this).children(".option").css("opacity", "1").css("top", "0");
+            $(this).children(".icon").css("opacity", "1").css("top", "0");
+            if (questionNumber < 5) {
+                $(this).children(".icon").css("opacity", "1").css("top", "0");
+            }
+        })
+        $(".answer").on("click", function () {
+            if (questionNumber < 5) {
+                //console.log($(this).context.innerText);
+                if ($(this).attr("id") == "answer1") {
+                    selection[questionNumber] = "1score";
+                } else if ($(this).attr("id") == "answer2") {
+                    selection[questionNumber] = "2score";
+                } else if ($(this).attr("id") == "answer3") {
+                    selection[questionNumber] = "3score";
+                }
+                console.log(selection);
+                questionNumber++;
+                console.log(questionNumber);
+                if (questionNumber < 5) {
+                    pageLoad(questionNumber);
+                }
+                if (questionNumber == 5) {
+                    for (var i = 0; i < 5; i++) {
+                        weights(i, selection[i]);
+                    }
+                    console.log(scores);
+                    product(scores[0], scores[1], scores[2]);
+                    scores = [0, 0, 0];
+                }
+            }
+        })
+        $(".quizNav").on("click", function () {
+            if (questionNumber == 5) {
+                $(".icon").toggle();
+                $(".buy").toggle();
+                $(".option").css("border-bottom", "5pt solid rgb(207, 177, 189)")
+                $(".icon").css("opacity", "1").css("top", "0");
+            }
+            var pos = $(this).attr("id");
+            pos = parseFloat(pos.charAt(pos.length - 1)) - 1;
+            if (pos < questionNumber) {
+                questionNumber = pos;
+                pageLoad(questionNumber);
+            }
+        })
+        $(".buy").on("click", function () {
+            localStorage.setItem("quizresult", "'" + $(this).parent().children(".option")[0].firstChild.innerHTML + "'");
+            console.log(localStorage.getItem("quizresult"));
+        })
+    })
+</script>
+
+</html>

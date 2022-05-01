@@ -271,10 +271,16 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function(){
             $("#maintext").hide();
             document.querySelector("h1").addEventListener("mouseover", function(){
                 $("#maintext").fadeIn();
+                var audio = {};
+                audio["voiceover"] = new Audio();
+                audio["voiceover"].src = "voiceover.mp4"
+                audio["voiceover"].addEventListener('load', function () {
+                audio["voiceover"].play();
+                });
             });
             document.querySelector("h1").addEventListener("mouseout", function(){
                 $("#maintext").fadeOut();
