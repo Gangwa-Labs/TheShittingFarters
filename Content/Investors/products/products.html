@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -9,7 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../Style.css">
-
+    <script src="http://iyawebdev.com/jqui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#maintext1").hide();
+        $("#maintext2").hide();
+        $("#maintext3").hide();
+        document.querySelector("#mvp1").addEventListener("mouseover", function(){
+            $("#maintext1").fadeIn();
+        });
+        document.querySelector("#mvp1").addEventListener("mouseout", function(){
+            $("#maintext1").hide();
+        });
+        document.querySelector("#mvp2").addEventListener("mouseover", function(){
+            $("#maintext2").fadeIn();
+        });
+        document.querySelector("#mvp2").addEventListener("mouseout", function(){
+            $("#maintext2").hide();
+        });
+        document.querySelector("#mvp3").addEventListener("mouseover", function(){
+            $("#maintext3").fadeIn();
+        });
+        document.querySelector("#mvp3").addEventListener("mouseout", function(){
+            $("#maintext3").hide();
+        });
+        $("#start").click(function(){
+            $("#box2").
+                animate({	
+                    "width": "50%",
+                    "background-color": "black",
+                }, 2000).html
+        });
+    });
+</script>
 
     <style>
         /*site stylesheet*/
@@ -49,7 +81,7 @@
         }
 
         .footer {
-            background-image: url(Background\ Image\ 1.png);
+            /*background-image: url(Background\ Image\ 1.png);*/
             padding: 2%;
             width: 96%;
             color: white;
@@ -69,7 +101,7 @@
         }
 
         .third {
-            width:(100/3);
+            width: 33.3333%;
             float: left;
             text-align: center;
         }
@@ -371,10 +403,13 @@ display: block;
 }
 /*hamburger css end here*/
     #roadmap{
-        background-image: url("Background\ Image\ 1.png");
-        text-align: center;
-        height: 300px;
+        text-align:center;
+        height: 350px;
         padding: 20px;
+        margin: auto;
+    }
+    #bottom{
+        background-image: url("Background\ Image\ 1.png");
     }
 </style>
 </head>
@@ -436,9 +471,10 @@ display: block;
                 </h1>
             </div>
         </div>
-        <div id="box2" class="flexclass">
+        <div id="box2" class="flexclass" style="background-color: white">
+            <input type="button" value="Start" id="start" style="margin-left: 5%;">
             <div class="middleMagic">
-                <img src="led light.png" style="width: 100%; z-index: 1;">
+                <img src="led light.png" style="width: 100%; z-index: 1;" id="led">
             </div>
         </div>
         <div id="box4" class="flexclass">
@@ -491,12 +527,24 @@ display: block;
     </div>
     <br>
     <br>
+    <div id="bottom">
     <div id="roadmap">
-        <h1>Roadmap</h1>
-        <br>
-        <div class="third"><h1>MV1</h1></div>
-        <div class="third"><h1>MV1</h1></div>
-        <div class="third"><h1>MV1</h1></div>
+        <br><h1 style="margin:auto">Roadmap</h1><br>
+        <div class="third" id="mvp1"><h1>MVP1</h1>
+            <div id="maintext1" style="color: #fff;">
+                Pillow with a Built-In Speaker
+            </div>
+        </div>
+        <div class="third" id="mvp2" style="color: #fff;"><h1>MVP2</h1>
+            <div id="maintext2">
+                App That Customizes the Learning Process While Sleeping
+            </div>
+        </div>
+        <div class="third" id="mvp3" style="color: #fff;"><h1>MVP3</h1>
+            <div id="maintext3">
+                Combination of MVP1 and MVP2
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -507,6 +555,7 @@ display: block;
         <div class="third" style="text-align: right; float: right;">
             <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
         </div>
+    </div>
     </div>
 </body>
 
