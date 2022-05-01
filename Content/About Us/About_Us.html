@@ -145,7 +145,8 @@
         width: 100%;
       }
     }
-    .header{
+    /*hamburger css start here*/
+.header{
     position: relative;
     width: 100%;
     display: flex;
@@ -219,6 +220,8 @@ padding: 35px 25px 45px 25px;
 
 }
 
+
+
 .togggle-menu{
     position: absolute;
     width: 50px;
@@ -262,7 +265,7 @@ display: block;
         position: fixed;
         top:4.5vh;
         right: -400px;
-        background: rgb(206, 180, 192);
+        background-color: rgb(206, 180, 192);
         width: 300px;
         height: 100%;
         padding-top: 65px;
@@ -277,12 +280,14 @@ display: block;
         inset;
     }
 }
+/*hamburger css end here*/
   </style>
 
 </head>
 
 <body>
-  <div class="nav" style="z-index: 3s;">
+  <!--hamburger start here-->
+  <div class="nav" style="z-index: 3;">
     <div class="third" style="text-align: left">
         <h3>Atmosleep</h3>
     </div>
@@ -295,9 +300,7 @@ display: block;
 
 <div class="hamburger"></div>
     <ul class="menu">
-        <div class="third" style="text-align: 'left">
-            <img src="Party Mode.png" style='margin: 30px 8px 20px 8px' id="partymode">
-        </div>
+     
         <li><a href="../../Home/Home.html">Home</a></li>
         <li><a href="../../About Us/About_Us.html">About us</a></li>
         <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
@@ -305,54 +308,15 @@ display: block;
         <li><a href="../Finances/Finances.html">Finances</a></li>
         <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
         <li><a href="../Website story/website story.html">Website Story</a></li>
-        
+      
         </ul>
    
 </div>
+
 </div>
-  <div class="nav" style="z-index: 2;">
-    <div class="third" style="text-align: left">
-      <h3>Atmosleep</h3>
-    </div>
-    <div id="pageThird" class="third" style="text-align: center">
-      <div id="navFlex">
-        <a href="../Home/Home.html">
-          <div class="navChild">
-            <p>Home</p>
-          </div>
-        </a>
-        <a href="../About Us/About_Us.html">
-          <div class="navChild" style="border-bottom: 1px solid white;">
-            <p>About Us</p>
-          </div>
-        </a>
-        <a href="../Investors/problems/Problems_Solution.html">
-          <div class="navChild">
-            <p>Solutions</p>
-          </div>
-        </a>
-        <a href="../Investors/products/products.html">
-          <div class="navChild">
-            <p>Products</p>
-          </div>
-        </a>
-        <a href="../Investors/Finances/Finances.html">
-          <div class="navChild">
-            <p>Finances</p>
-          </div>
-        </a>
-        <a href="../Investors/Marketplace/marketplace.html">
-          <div class="navChild">
-            <p>Marketplace</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="third" style="text-align: right">
-      <a><img src="Person Icon.png" style="margin:30px 8px 20px 8px"></a>
-      <a><img src="Shopping Cart Icon.png" style="margin:30px 8px 20px 8px"></a>
-    </div>
-  </div>
+<!--close of nav bar-->
+<!--hamburger close here-->
+
   <div id=abouttitle>
     About Us
   </div>
