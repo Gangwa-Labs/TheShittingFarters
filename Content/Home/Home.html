@@ -97,27 +97,32 @@
             position: absolute;
             width: 15%;
         }
+
         #sticker1 {
             visibility: hidden;
             top: 380px;
             right: 45%;
         }
+
         #sticker2 {
             visibility: hidden;
             top: 120px;
             right: 10%;
         }
+
         #sticker3 {
             visibility: hidden;
             width: 0px;
             margin-top: -20px;
             margin-bottom: 10px;
         }
+
         #sticker4 {
             visibility: hidden;
             top: 1490px;
             left: 40%;
         }
+
         #sticker5 {
             visibility: hidden;
             top: 2040px;
@@ -166,19 +171,24 @@
                 height: 80%;
                 float: none;
             }
-            #navFlex{
+
+            #navFlex {
                 flex-flow: column wrap;
                 height: 150px;
             }
-            #navFlex a{
+
+            #navFlex a {
                 width: 50%;
             }
+
             .sticker {
                 width: 0px;
             }
+
             #sticker3 {
                 width: 0px;
             }
+
             #partymode {
                 visibility: hidden;
             }
@@ -201,16 +211,19 @@
             #featureoverview .third {
                 margin-top: -140px;
             }
+
             #navFlex {
                 flex-flow: column nowrap;
                 height: 300px;
             }
-            #navFlex a{
+
+            #navFlex a {
                 width: 100%;
             }
         }
+
         /*hamburger css start here*/
-        .header{
+        .header {
             position: relative;
             width: 100%;
             display: flex;
@@ -220,12 +233,14 @@
             padding: 0.25px;
             transition: 0.3s;
         }
-        .navigation{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .menu{
+
+        .menu {
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -233,11 +248,13 @@
             z-index: 99;
             transition: 0.5s;
         }
-        .menu li{
+
+        .menu li {
             list-style-type: none;
 
         }
-        .menu li a{
+
+        .menu li a {
             color: white;
             text-decoration: none;
             display: block;
@@ -246,12 +263,14 @@
             line-height: 1;
             transition: 0.3s;
         }
-        .menu li a:hover{
-        box-shadow: 0 -5px 0px #fff inset,
-        500px 0 0 rbga(255,255,255,0.03) inset;
-        padding: 35px 25px 45px 25px;
+
+        .menu li a:hover {
+            box-shadow: 0 -5px 0px #fff inset,
+                500px 0 0 rbga(255, 255, 255, 0.03) inset;
+            padding: 35px 25px 45px 25px;
         }
-        .hamburger{
+
+        .hamburger {
             position: absolute;
             width: 30px;
             height: 4px;
@@ -263,8 +282,9 @@
             z-index: 4;
             transition: 0.3s;
         }
+
         .hamburger::before,
-        .hamburger::after{
+        .hamburger::after {
             content: "";
             position: absolute;
             height: 4px;
@@ -273,18 +293,20 @@
             border-radius: 10px;
             transition: 0.3s;
         }
-        .hamburger::before{
-            top:-10px;
-            width: 45px;
 
-        }
-        .hamburger::after{
-            top:-10px;
+        .hamburger::before {
+            top: -10px;
             width: 45px;
 
         }
 
-        .togggle-menu{
+        .hamburger::after {
+            top: -10px;
+            width: 45px;
+
+        }
+
+        .togggle-menu {
             position: absolute;
             width: 50px;
             height: 100%;
@@ -294,54 +316,64 @@
             cursor: pointer;
             opacity: 0;
         }
+
         .hamburger,
-        .togggle-menu{
-        display: none;
+        .togggle-menu {
+            display: none;
         }
-        .navigation input:checked ~.hamburger{
+
+        .navigation input:checked~.hamburger {
             background: transparent;
         }
-        .navigation input:checked ~.hamburger:before{
-            top:0;
+
+        .navigation input:checked~.hamburger:before {
+            top: 0;
             transform: rotate(-45deg);
             width: 30px;
         }
-        .navigation input:checked ~.hamburger:after{
-        top: 0;
-        transform: rotate(45deg);
-        width: 30px;
+
+        .navigation input:checked~.hamburger:after {
+            top: 0;
+            transform: rotate(45deg);
+            width: 30px;
         }
-        .navigation input:checked~ .menu{
+
+        .navigation input:checked~.menu {
             right: 0;
-            
+
         }
+
         @media screen and (max-width:3600px) {
-        .hamburger,
-        .togggle-menu{
-        display: block;
-        }
-            .menu{
+
+            .hamburger,
+            .togggle-menu {
+                display: block;
+            }
+
+            .menu {
                 justify-content: start;
                 flex-direction: column;
                 align-items: center;
                 position: fixed;
-                top:4.5vh;
+                top: 4.5vh;
                 right: -400px;
                 background: rgb(206, 180, 192);
                 width: 300px;
                 height: 100%;
                 padding-top: 65px;
             }
-            .menu li{
-                width: 100%;    
+
+            .menu li {
+                width: 100%;
             }
+
             .menu li a,
-            .menu li a:hover{
+            .menu li a:hover {
                 padding: 30px;
-                box-shadow: 0 1px 0 rgba(255,255,255,0.3)
-                inset;
+                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
             }
         }
+
         /*hamburger css end here*/
     </style>
 </head>
@@ -356,30 +388,30 @@
         </div>
 
 
-    <div class="navigation">
-    
-   
-    <input type="checkbox" class="togggle-menu">
-    
-    <div class="hamburger"></div>
-        <ul class="menu">
-            <div class="third" style="text-align: 'left">
-                <img src="Party Mode.png" style= 'margin: 30px 8px 20px 8px' id="partymode">
-            </div>
-            <li><a href="../../Home/Home.html">Home</a></li>
-            <li><a href="../../About Us/About_Us.html">About us</a></li>
-            <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
-            <li><a href="../products/products.html">Products</a></li>
-            <li><a href="../Finances/Finances.html">Finances</a></li>
-            <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
-            <li><a href="../Website story/website story.html">Website Story</a></li>
-            
+        <div class="navigation">
+
+
+            <input type="checkbox" class="togggle-menu">
+
+            <div class="hamburger"></div>
+            <ul class="menu">
+                <div class="third" style="text-align: left;">
+                    <img src="Party Mode.png" style="margin: 30px 8px 20px 8px;" id="partymode">
+                </div>
+                <li><a href="../../Home/Home.html">Home</a></li>
+                <li><a href="../../About Us/About_Us.html">About us</a></li>
+                <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
+                <li><a href="../products/products.html">Products</a></li>
+                <li><a href="../Finances/Finances.html">Finances</a></li>
+                <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
+                <li><a href="../Website story/website story.html">Website Story</a></li>
+
             </ul>
-       
-</div>
+
+        </div>
     </div>
 
-   <!--hamburger close here-->
+    <!--hamburger close here-->
 
 
 
@@ -465,18 +497,18 @@
 
     <script>
         // if there isn't a cookie on the "mode" of the home screen, we will set it to default
-        if(!localStorage.getItem("mode")){
+        if (!localStorage.getItem("mode")) {
             localStorage.setItem("mode", "default");
         }
 
-        if(localStorage.getItem("mode") == "party"){
+        if (localStorage.getItem("mode") == "party") {
             document.body.style.backgroundColor = "black";
             document.querySelector("#sticker1").style.visibility = "visible";
             document.querySelector("#sticker2").style.visibility = "visible";
             document.querySelector("#sticker3").style.visibility = "visible";
             document.querySelector("#sticker4").style.visibility = "visible";
             document.querySelector("#sticker5").style.visibility = "visible";
-                
+
             document.querySelector(".nav").style.backgroundImage = "none";
             document.querySelector(".nav").style.backgroundColor = "black";
 
@@ -501,10 +533,10 @@
             document.querySelector("#sticker3").style.position = "relative";
         }
 
-        document.querySelector("#partymode").addEventListener("click", function(){
-            
+        document.querySelector("#partymode").addEventListener("click", function () {
+
             // if the user clicks on the party icon while on default mode, switches css to party mode
-            if(localStorage.getItem("mode") == "default"){
+            if (localStorage.getItem("mode") == "default") {
                 localStorage.setItem("mode", "party");
 
                 document.body.style.backgroundColor = "black";
@@ -513,7 +545,7 @@
                 document.querySelector("#sticker3").style.visibility = "visible";
                 document.querySelector("#sticker4").style.visibility = "visible";
                 document.querySelector("#sticker5").style.visibility = "visible";
-                
+
                 document.querySelector(".nav").style.backgroundImage = "none";
                 document.querySelector(".nav").style.backgroundColor = "black";
 
