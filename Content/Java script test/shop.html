@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <title>Shopping Cart - Atmosleep</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <!-- Importing Open Sans, an open source Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+        <script src="http://iyawebdev.com/jquery.js"></script>
+        <link rel="stylesheet" href="../Style.css">
+        <style>
+            body {
+                background-image: url("../Home/Background\ Image\ 1.png");
+            }
+
+            /*hamburger css start here*/
+            .header{
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: purple;
+                padding: 0.25px;
+                transition: 0.3s;
+            }
+            .navigation{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+            .menu{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                z-index: 99;
+                transition: 0.5s;
+            }
+            .menu li{
+                list-style-type: none;
+
+            }
+            .menu li a{
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 40px 25px;
+                font-size: 18px;
+                line-height: 1;
+                transition: 0.3s;
+            }
+            .menu li a:hover{
+            box-shadow: 0 -5px 0px #fff inset,
+            500px 0 0 rbga(255,255,255,0.03) inset;
+            padding: 35px 25px 45px 25px;
+            }
+            .hamburger{
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                top: 50px;
+                right: 10%;
+                background: #fff;
+                border-radius: 10px;
+                cursor: pointer;
+                z-index: 4;
+                transition: 0.3s;
+            }
+            .hamburger::before,
+            .hamburger::after{
+                content: "";
+                position: absolute;
+                height: 4px;
+                right: 0;
+                background: #fff;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+            .hamburger::before{
+                top:-10px;
+                width: 45px;
+
+            }
+            .hamburger::after{
+                top:-10px;
+                width: 45px;
+
+            }
+
+            .togggle-menu{
+                position: absolute;
+                width: 50px;
+                height: 100%;
+                top: 30px;
+                right: 10%;
+                z-index: 5;
+                cursor: pointer;
+                opacity: 0;
+            }
+            .hamburger,
+            .togggle-menu{
+            display: none;
+            }
+            .navigation input:checked ~.hamburger{
+                background: transparent;
+            }
+            .navigation input:checked ~.hamburger:before{
+                top:0;
+                transform: rotate(-45deg);
+                width: 30px;
+            }
+            .navigation input:checked ~.hamburger:after{
+            top: 0;
+            transform: rotate(45deg);
+            width: 30px;
+            }
+            .navigation input:checked~ .menu{
+                right: 0;
+                
+            }
+            @media screen and (max-width:3600px) {
+            .hamburger,
+            .togggle-menu{
+            display: block;
+            }
+                .menu{
+                    justify-content: start;
+                    flex-direction: column;
+                    align-items: center;
+                    position: fixed;
+                    top:4.5vh;
+                    right: -400px;
+                    background: rgb(206, 180, 192);
+                    width: 300px;
+                    height: 100%;
+                    padding-top: 65px;
+                }
+                .menu li{
+                    width: 100%;    
+                }
+                .menu li a,
+                .menu li a:hover{
+                    padding: 30px;
+                    box-shadow: 0 1px 0 rgba(255,255,255,0.3)
+                    inset;
+                }
+            }
+            /*hamburger css end here*/
+        </style>
+    </head>
+
+    <body>
+        <!--hamburger start here-->
+        <div class="nav" style="z-index: 99;">
+            <div class="third" style="text-align: left">
+                <h3>Atmosleep</h3>
+            </div>
+
+
+            <div class="navigation">
+            
+        
+                <input type="checkbox" class="togggle-menu">
+                
+                <div class="hamburger"></div>
+                <ul class="menu">
+                    <li><a href="../Home/Home.html">Home</a></li>
+                    <li><a href="../About Us/About_Us.html">About us</a></li>
+                    <li><a href="../Investors/problems/Problems_Solution.html">Solutions</a></li>
+                    <li><a href="../Investors/products/products.html">Products</a></li>
+                    <li><a href="../Investors/Finances/Finances.html">Finances</a></li>
+                    <li><a href="../Investors/Marketplace/marketplace.html">Marketplace</a></li>
+                    <li><a href="../Investors/Website story/website story.html">Website Story</a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <!--hamburger close here-->
+
+        <div id="orderform">
+            <table border="0" cellpadding="9" bordercolor="#FFFFFF">
+                <tr>
+                    <td align="center" colspan="2"><font color="#FFFFFF"><b>Order Form</b></font></td>
+                </tr>
+                <tr>
+                    <td align="center"><font color="#FFFFFF"><i><b>Items</b></i></font></td>
+                    <td align="center"><font color="#FFFFFF"><i><b>Qty</b></i></font></td>
+                </tr>
+                <tr> 
+                <td><hr></td>
+                <td><hr></td>
+                </tr>
+                <tr>
+                    <td><font color="#FFFFFF">Cirrus ($60.00)</font></td>
+                    <td align="center">
+                        <input type="text" name="fnumb" id="fnumb" size="4" value="0"> 
+                        <input type="button" value="-" class="decreasebutton"   id="fdecrease" >
+                        <input type="button" value="+" class="increasebutton" id="fincrease">
+                    </td>
+                </tr>
+                <tr> 
+                    <td><font color="#FFFFFF"><nobr>Cumulus ($60.00)</nobr></font></td>
+                    <td align="center">
+                        <input type="text" name="lnumb" id="lnumb" size="4" value="0" >
+                        <input type="button" value="-"  class="decreasebutton"  id="ldecrease">
+                        <input type="button" value="+" class="increasebutton" id="lincrease" >
+                    </td>
+                </tr>
+                <tr> 
+                    <td><font color="#FFFFFF">Stratus ($60.00)</font></td>
+                    <td align="center">
+                        <input type="text" name="mnumb" id="mnumb" size="4" value="0" >
+                        <input type="button" value="-" class="decreasebutton"  id="mdecrease">
+                        <input type="button" value="+" class="increasebutton" id="mincrease" >
+                    </td>
+                </tr>
+                <tr>
+                        <td colspan="2"><hr><input type="button" value="calculate" ></td>
+                </tr>
+                <tr>
+                    <td align="right"><font color="#FFFFFF"><i>Sub-total</i></font></td>
+                    <td><input type="text" name="subt" id="subt" size="15"></td>
+                </tr>
+                <tr>
+                    <td align="right"><font color="#FFFFFF"><i>Tax</i></font></td>
+                    <td><input type="text" name="tax" id="tax" size="15"></td>
+                </tr>
+                <tr>
+                    <td align="right"><font color="#FFFFFF"><i>Total</i></font></td>
+                    <td><input type="text" name="total" id="total" size="15"></td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            var increase = function(temp){
+                x = parseFloat(temp.val());
+                x++;
+                temp.val(x);
+            }
+            var decrease = function(temp){
+                x = parseFloat(temp.val());
+                x--;
+                if (x >= 0){
+                    temp.val(x);
+                }
+            }
+            var subtotal = function(){
+                total = 0;
+                total += 60.00 * parseFloat(document.querySelector("#fnumb").value);
+                total += 60.00 * parseFloat(document.querySelector("#lnumb").value);
+                total += 60.00 * parseFloat(document.querySelector("#mnumb").value);
+
+                document.querySelector("#subt").value = total;
+            }
+
+            var tax = function(){
+                RATE = 0.095;
+                document.querySelector("#tax").value = document.querySelector("#subt").value * RATE;
+            }
+
+            var total = function(){
+                document.querySelector("#total").value = document.querySelector("#subt").value + document.querySelector("#tax").value;
+                alert("testing");
+            }
+
+            document.querySelector("input[value='calculate']").addEventListener("click", function(){
+                subtotal();
+                tax();
+                total();
+            })
+
+            $(document).ready(function(){
+                $(".increasebutton").on("click", function(){
+                    increase($(this).prev().prev());
+                })
+                $(".decreasebutton").on("click", function(){
+                    decrease($(this).prev());
+                })
+            })
+        </script>
+    </body>
+</html>
