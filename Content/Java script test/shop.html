@@ -260,8 +260,12 @@
                         <td><input type="text" name="lname" size="15"></td>
                     </tr>
                     <tr>
+                        <td><font color="#FFFFFF">Phone Number</font></td>
+                        <td><input type="text" id="pnum" name="pnum" size="15"></td>
+                    </tr>
+                    <tr>
                         <td><font color="#FFFFFF">Email</font></td>
-                        <td><input type="text" name="email" size="15"></td>
+                        <td><input type="text" id="email" name="email" size="15"></td>
                     </tr>
                     <tr>
                         <td><font color="#FFFFFF">Street Address</font></td>
@@ -341,8 +345,41 @@
                 totalcost();
             })
 
+            var check = function(){
+                phonenum = document.querySelector("#pnum").value;
+                phonenum = phonenum.replace(/[()-]/g, "");
+
+                email = document.querySelector("#email").value;
+
+                valid = true;
+
+                // phone number validation test
+                if(phonenum.length != 10){
+                    alert("Please enter a valid phone number with an area code");
+                    valid = false;
+                } else {
+                    document.querySelector("#pnum").value = "(" + phonenum.substring(0,3) + ") " + phonenum.substring(3,6) + "-" + phonenum.substring(6, 10);
+                }
+
+                // email validation test
+                if(email.indexOf("@") == -1){
+                    alert("Please enter a valid email address");
+                    valid = false;
+                } else if(email.indexOf(".") == -1){
+                    alert("Please enter a valid email address");
+                    valid = false;
+                } else if(email.indexOf(".") < email.indexOf("@")){
+                    alert("Please enter a valid email address");
+                    valid = false;
+                }
+
+                if(valid){
+                    document.querySelector("#confirmation").innerHTML = "Thank you for purchasing from Atmosleep! You should receive a confirmation email shortly.";
+                }
+            }
+
             document.querySelector("input[value='Order Now']").addEventListener("click", function(){
-                document.querySelector("#confirmation").innerHTML = "Thank you for purchasing from Atmosleep! You should receive a confirmation email shortly.";
+                check();    
             })
 
 
