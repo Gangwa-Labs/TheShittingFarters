@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        h1{
+        h1 {
             font-size: 32pt;
             line-height: unset;
         }
+
         div {
             /* border: 1px solid red; */
         }
@@ -157,6 +158,14 @@
             height: 75px;
             flex: 0 0 75px;
             display: none;
+        }
+
+        .footer {
+            margin: 0px;
+            padding-bottom: 2px;
+            height: 60px;
+            position: absolute;
+            bottom: 0px;
         }
 
         #factSide {
@@ -368,19 +377,71 @@
         }
 
         /*hamburger css end here*/
-        .footer {
-            margin: 0px;
-            padding-bottom: 2px;
-            height: 60px;
-            position: absolute;
-            bottom: 0px;
+
+        @media only screen and (max-width: 675px) {
+            h1{
+                font-size: 12pt;
+            }
+            #quizCaption h1{
+                font-size: 25pt;
+            }
+            #quizCaption h2{
+                font-size: 15pt;
+            }
+            p{
+                font-size: 5pt;
+            }
+            #container {
+                flex-direction: column-reverse;
+            }
+            #quizSide{
+                width: 100%;
+                height: 80vw;
+            }
+            #factSide{
+                width: 100%;
+                height: 10vw;
+            }
+            #factCount{
+                font-size: 10pt;
+            }
+            #factCount p{
+                font-size: 15pt;
+            }
+            #factCount h1{
+                font-size: 15pt;
+            }
+            #factDisplay p{
+                font-size: 10pt;
+            }
+            #factDisplay h1{
+                margin: 0;
+                font-size: 10pt;
+            }
+            .third{
+                color: #CFB1BD;
+            }
+            .buy{
+                bottom: -10px;
+            }
+            .buy p{
+                font-size: 10pt;
+            }
+            .outerCircle{
+                height: 50px;
+                border-radius: 50px;
+                flex: 0 0 50px;
+            }
+            .footer div{
+                color: white;
+            }
         }
     </style>
 </head>
 
 <body>
     <!--hamburger start here-->
-    <div class="nav" style="z-index: 99;">
+    <div class="nav" style="z-index: 3;">
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
@@ -389,24 +450,27 @@
         <div class="navigation">
 
 
-            <input type="checkbox" class="togggle-menu" style="color:#CFB1BD;">
+            <input type="checkbox" class="togggle-menu">
 
             <div class="hamburger"></div>
             <ul class="menu">
+
                 <li><a href="../Home/Home.html">Home</a></li>
                 <li><a href="../About Us/About_Us.html">About us</a></li>
+                <li><a href="quiz.html">Pillow Quiz</a></li>
                 <li><a href="../Investors/problems/Problems_Solution.html">Solutions</a></li>
                 <li><a href="../Investors/products/products.html">Products</a></li>
                 <li><a href="../Investors/Finances/Finances.html">Finances</a></li>
                 <li><a href="../Investors/Marketplace/marketplace.html">Marketplace</a></li>
+                <li><a href="../Investors/Ask Page/ask.html">Ask</a></li>
                 <li><a href="../Investors/Website story/website story.html">Website Story</a></li>
-                <li><a href="../Investors/Ask Page/ask.html">Website Story</a></li>
 
             </ul>
 
         </div>
-    </div>
 
+    </div>
+    <!--close of nav bar-->
     <!--hamburger close here-->
 
     <div id="container">
@@ -460,7 +524,7 @@
         <div class="third" style="text-align: left;">
             <h4>Atmosleep</h4>
         </div>
-        <div class="third" style="text-align: right; float: right;  color: #CFB1BD;">
+        <div class="third" style="text-align: right; float: right; width: 40%;">
             <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
         </div>
     </div>
