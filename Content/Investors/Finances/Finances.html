@@ -167,35 +167,54 @@
             margin: auto;
             padding-right: 10%;
         }
+
+        #chart {
+            position: absolute;
+            right: 0px;
+            width: 60%;
+            margin: auto;
+        }
+
+        #points {
+            margin: 0 46%;
+            accent-color: purple;
+        }
+
         @media only screen and (max-width: 1148px) {
             #heroimage {
                 padding-top: 200px;
             }
-            #navFlex{
+
+            #navFlex {
                 flex-flow: column wrap;
                 height: 150px;
             }
-            #navFlex a{
+
+            #navFlex a {
                 width: 50%;
             }
         }
-        
+
         @media only screen and (max-width: 675px) {
             #heroimage {
                 padding-top: 300px;
                 height: 600px;
             }
-            #navFlex{
+
+            #navFlex {
                 flex-flow: column nowrap;
                 height: 300px;
             }
-            #navFlex a{
+
+            #navFlex a {
                 width: 100%;
             }
-            #circle{
+
+            #circle {
                 margin-top: 100px;
             }
-            #heroimage h1{
+
+            #heroimage h1 {
                 font-size: 30pt;
             }
         }
@@ -214,7 +233,7 @@
         <div id="pageThird" class="third" style="text-align: center;">
             <div id="navFlex">
                 <a href="../../Home/Home.html">
-                    <div class="navChild" >
+                    <div class="navChild">
                         <p>Home</p>
                     </div>
                 </a>
@@ -276,16 +295,11 @@
                 Finances so simple that you could do them in your sleep. Learn how Atmosleep is leading the sleep market
                 with cutting edge Finances and smart accounting methods. </p>
         </div>
-        <div id="sheets"><iframe
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvOSJpVkpT9jpPqwS_s290yeuj5VZpBMGj4yoVKaSkdIlolkTFUIjKGIkT9_Pueg/pubhtml?widget=true&amp;headers=false"
-                style="height:100%;width:100%;" title="Fiances"></iframe></div>
+        <div id="chart">
+            <canvas id="myChart" width="400" height="175"></canvas>
+            <input type="range" class="slider" value="6" min="2" max="6" id="points" onchange="updateGraph(this)">
+        </div>
     </div>
-    <div id="whitetitle">
-        <h1>Contingency Plan</h1>
-    </div>
-    <div id="contingency"><iframe
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSrLW1uJViEgyxmbFIgZ8IliChB5HSFGxsByDEKzNl3hePJ15QzTofywAxoG99-iw/pubhtml?widget=true&amp;headers=false"
-            style="height:100%;width:100%;" title="Contingency Plan"></iframe></div>
     <div class="whitesection">
         <div id="circle"></div>
         <p>
@@ -303,5 +317,123 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const labels = ["Year 0", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5"];
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Revenue',
+            data: [114163, 125579, 138137, 151950, 167146, 183860],
+            fill: false,
+            borderColor: 'purple',
+            tension: 0.1,
+            backgroundColor: 'purple',
+            color: 'color'
+        },
+        {
+            label: 'Operating Profit',
+            data: [8301, 9130, 10043, 11048, 12153, 13368],
+            fill: false,
+            borderColor: 'blue',
+            tension: 0.1,
+            backgroundColor: 'blue',
+            color: 'color'
+        },
+        {
+            label: 'Gross Profit',
+            data: [83007, 91307, 100438, 110482, 121530, 133683],
+            fill: false,
+            borderColor: 'green',
+            tension: 0.1,
+            backgroundColor: 'green',
+            color: 'color'
+        }],
+    };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        color: "white",  // not 'fontColor:' anymore
+                        font: {
+                            size: 20 // 'size' now within object 'font {}'
+                        },
+                    },
+                },
+                title: {
+                    display: true,
+                    text: 'Finanical Predictions',
+                    color: 'white',
+                    font: {
+                        size: 30
+                    }
+                }
+            },
+            scales: {
+                y: {  // not 'yAxes: [{' anymore (not an array anymore)
+                    title: {
+                        display: true,
+                        text: 'Dollars',
+                        color: 'white',
+                        font: {
+                            size: 15
+                        }
+                    },
+                    grid: {
+                        color: 'white',
+                    },
+                    ticks: {
+                        color: "white", // not 'fontColor:' anymore
+                        // fontSize: 18,
+                        font: {
+                            size: 18, // 'size' now within object 'font {}'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                x: {  // not 'xAxes: [{' anymore (not an array anymore)
+                    title: {
+                        display: true,
+                        text: 'Operating Year',
+                        color: 'white',
+                        font: {
+                            size: 15
+                        }
+                    },
+                    grid: {
+                        color: 'white',
+                    },
+                    ticks: {
+                        color: "white",  // not 'fontColor:' anymore
+                        //fontSize: 14,
+                        font: {
+                            size: 20 // 'size' now within object 'font {}'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            },
+        },
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+    function updateGraph(range) {
+        // console.log(range.value);
+        // console.log(myChart.config.data.labels)
+        const rangeValue = labels.slice(0, range.value);
+        //console.log(rangeValue);
+        myChart.config.data.labels = rangeValue;
+        myChart.update()
+        // update chart...
+    }
+</script>
 
 </html>
