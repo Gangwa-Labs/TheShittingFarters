@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -9,40 +8,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../Style.css">
-    <script src="http://iyawebdev.com/jqui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#maintext1").hide();
-            $("#maintext2").hide();
-            $("#maintext3").hide();
-            document.querySelector("#mvp1").addEventListener("mouseover", function () {
-                $("#maintext1").fadeIn();
-            });
-            document.querySelector("#mvp1").addEventListener("mouseout", function () {
-                $("#maintext1").hide();
-            });
-            document.querySelector("#mvp2").addEventListener("mouseover", function () {
-                $("#maintext2").fadeIn();
-            });
-            document.querySelector("#mvp2").addEventListener("mouseout", function () {
-                $("#maintext2").hide();
-            });
-            document.querySelector("#mvp3").addEventListener("mouseover", function () {
-                $("#maintext3").fadeIn();
-            });
-            document.querySelector("#mvp3").addEventListener("mouseout", function () {
-                $("#maintext3").hide();
-            });
-            $("#start").click(function () {
-                $("#box2").
-                    animate({
-                        "width": "50%",
-                        "background-color": "black",
-                    }, 2000).html
-            });
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+
+    var demo = function(){
+        $("#box2")
+            .animate(  {
+                "background-color" : "white"
+            }, 10000)
+            .animate(  {
+                "background-color" : "#C59FC9"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#CFBAE1"
+            }, 2500)
+            .animate(  {
+                "background-color" : "#C1E0F7"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#A4DEF9"
+            }, 2500)
+            .animate(  {
+                "background-color" : "#97F9F9"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#b47484"
+            }, 2500)
+            .animate(  {
+                "background-color" : "#bf7d8d"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#BC9EC1"
+            }, 2500)
+            .animate(  {
+                "background-color" : "#9792E3"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#C59FC9"
+            }, 2000)
+            .animate(  {
+                "background-color" : "#CFBAE1"
+            }, 2500)
+        $("#led")
+            .animate(  {
+                    "width" : "0%",
+                }, 0)
+            .animate(  {
+                    "width" : "100%",
+                }, 3000).delay(3000)
+            .animate(  {
+                    "width" : "100%",
+                    "height" : "60%"
+                }, 900)
+            .animate(  {
+                "width" : "110%",
+                "height" : "50%"
+            }, 900)
+            .animate(  {
+                "width" : "100%",
+                "height" : "50%"
+            }, 1000).delay(24500)
+            .animate(  {
+                    "width" : "100%",
+                    "height" : "65%"
+                }, 900)
+            .animate(  {
+                "width" : "100%",
+                "height" : "0%"
+            }, 2000)
+    }
+    $(document).ready(function(){
+        $("#maintext1").hide();
+        $("#maintext2").hide();
+        $("#maintext3").hide();
+        document.querySelector("#mvp1").addEventListener("mouseover", function(){
+            $("#maintext1").fadeIn();
         });
-    </script>
+        document.querySelector("#mvp1").addEventListener("mouseout", function(){
+            $("#maintext1").hide();
+        });
+        document.querySelector("#mvp2").addEventListener("mouseover", function(){
+            $("#maintext2").fadeIn();
+        });
+        document.querySelector("#mvp2").addEventListener("mouseout", function(){
+            $("#maintext2").hide();
+        });
+        document.querySelector("#mvp3").addEventListener("mouseover", function(){
+            $("#maintext3").fadeIn();
+        });
+        document.querySelector("#mvp3").addEventListener("mouseout", function(){
+            $("#maintext3").hide();
+        });
+        
+        var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'Logic.mp3');
+
+        /*animation*/
+        $("#start").click(function(){
+            audioElement.play();
+            $(this).fadeOut(0);        
+            demo();
+        });
+    });
+</script>
 
     <style>
         /*site stylesheet*/
@@ -188,8 +257,14 @@
             align-items: center;
             justify-content: center;
             flex-grow: 1;
-            width: 50vw;
+            width: 49vw;
             height: 50vw;
+        }
+
+        #start{
+            display: flex;
+            justify-content: center;
+            margin: auto;
         }
 
         #box1 {
@@ -202,287 +277,249 @@
             background-image: url("Background Image 1.png");
             background-repeat: none;
         }
-
         @media only screen and (max-width: 1148px) {
-            #navFlex {
+            #navFlex{
                 flex-flow: column wrap;
                 height: 150px;
             }
-
-            #navFlex a {
+            #navFlex a{
                 width: 50%;
             }
-
             #flexy h1 {
                 font-size: 20pt;
             }
         }
-
         @media only screen and (max-width: 675px) {
-            #mainbackground {
+            #mainbackground{
                 padding-top: 300px;
             }
-
-            #pill {
+            #pill{
                 padding-top: 90px;
             }
-
-            #navFlex {
+            #navFlex{
                 flex-flow: column nowrap;
                 height: 300px;
             }
-
-            #navFlex a {
+            #navFlex a{
                 width: 100%;
             }
-
             #flexy h1 {
                 font-size: 16pt;
             }
-
-            #flexy {
+            #flexy{
                 flex-direction: column;
             }
-
-            .flexclass {
+            .flexclass{
                 width: 100vw;
             }
-
-            #box3 {
+            #box3{
                 order: 3;
             }
-
-            #box4 {
+            #box4{
                 order: 4;
             }
         }
 
         @media only screen and (max-width: 700px) {
-            #maintext {
-                font-size: 7vh;
-            }
-
-            #mainbackground {
-                height: 40vh;
-            }
-
-            h1 {
-                font-size: 2vh;
-            }
-
-            #infobox {
-                z-index: 0;
-                text-align: center;
-                width: auto;
-                margin: 0;
-                height: auto;
-                margin-top: 10vh;
-            }
-
-            #infobox img {
-                width: 10%;
-            }
-        }
-
-        /*hamburger css start here*/
-        .header {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: purple;
-            padding: 0.25px;
-            transition: 0.3s;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            z-index: 3;
-            transition: 0.5s;
-        }
-
-        .menu li {
-            list-style-type: none;
-
-        }
-
-        .menu li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 40px 25px;
-            font-size: 18px;
-            line-height: 1;
-            transition: 0.3s;
-        }
-
-        .menu li a:hover {
-            box-shadow: 0 -5px 0px #fff inset,
-                500px 0 0 rbga(255, 255, 255, 0.03) inset;
-            padding: 35px 25px 45px 25px;
-        }
-
-        .hamburger {
-            position: absolute;
-            width: 30px;
-            height: 4px;
-            top: 50px;
-            right: 10%;
-            background: #fff;
-            border-radius: 10px;
-            cursor: pointer;
-            z-index: 4;
-            transition: 0.3s;
-        }
-
-        .hamburger::before,
-        .hamburger::after {
-            content: "";
-            position: absolute;
-            height: 4px;
-            right: 0;
-            background: #fff;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .hamburger::before {
-            top: -10px;
-            width: 45px;
-
-        }
-
-        .hamburger::after {
-            top: -10px;
-            width: 45px;
-
-        }
-
-
-
-        .togggle-menu {
-            position: absolute;
-            width: 50px;
-            height: 100%;
-            top: 30px;
-            right: 10%;
-            z-index: 5;
-            cursor: pointer;
-            opacity: 0;
-        }
-
-        .hamburger,
-        .togggle-menu {
-            display: none;
-        }
-
-        .navigation input:checked~.hamburger {
-            background: transparent;
-        }
-
-        .navigation input:checked~.hamburger:before {
-            top: 0;
-            transform: rotate(-45deg);
-            width: 30px;
-        }
-
-        .navigation input:checked~.hamburger:after {
-            top: 0;
-            transform: rotate(45deg);
-            width: 30px;
-        }
-
-        .navigation input:checked~.menu {
-            right: 0;
-
-        }
-
-        @media screen and (max-width:3600px) {
-
-            .hamburger,
-            .togggle-menu {
-                display: block;
-            }
-
-            .menu {
-                justify-content: start;
-                flex-direction: column;
-                align-items: center;
-                position: fixed;
-                top: 4.5vh;
-                right: -400px;
-                background-color: rgb(206, 180, 192);
-                width: 300px;
-                height: 100%;
-                padding-top: 65px;
-            }
-
-            .menu li {
-                width: 100%;
-            }
-
-            .menu li a,
-            .menu li a:hover {
-                padding: 30px;
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-            }
-        }
-
-        /*hamburger css end here*/
-        #roadmap {
+           #maintext {
+            font-size:7vh;
+         }
+          #mainbackground{
+              height:40vh;
+          }
+          h1{
+              font-size: 2vh;
+          }
+          #infobox{
+            z-index: 0;
             text-align: center;
-            height: 350px;
-            padding: 20px;
-            margin: auto;
-        }
+            width: auto;
+            margin: 0;
+            height: auto;
+            margin-top: 10vh;
+          }
+          #infobox img{
+              width: 10%;
+          }
+}
+/*hamburger css start here*/
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: purple;
+    padding: 0.25px;
+    transition: 0.3s;
+}
+.navigation{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3;
+    transition: 0.5s;
+}
+.menu li{
+    list-style-type: none;
 
-        #bottom {
-            background-image: url("Background\ Image\ 1.png");
-        }
-    </style>
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 40px 25px;
+    font-size: 18px;
+    line-height: 1;
+    transition: 0.3s;
+}
+.menu li a:hover{
+box-shadow: 0 -5px 0px #fff inset,
+500px 0 0 rbga(255,255,255,0.03) inset;
+padding: 35px 25px 45px 25px;
+}
+.hamburger{
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    top: 50px;
+    right: 10%;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 4;
+    transition: 0.3s;
+}
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hamburger::before{
+    top:-10px;
+    width: 45px;
+
+}
+.hamburger::after{
+    top:-10px;
+    width: 45px;
+
+}
+
+
+
+.togggle-menu{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    top: 30px;
+    right: 10%;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0;
+}
+.hamburger,
+.togggle-menu{
+display: none;
+}
+.navigation input:checked ~.hamburger{
+    background: transparent;
+}
+.navigation input:checked ~.hamburger:before{
+    top:0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+.navigation input:checked ~.hamburger:after{
+top: 0;
+transform: rotate(45deg);
+width: 30px;
+}
+.navigation input:checked~ .menu{
+    right: 0;
+    
+}
+@media screen and (max-width:3600px) {
+ .hamburger,
+.togggle-menu{
+display: block;
+}
+    .menu{
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top:4.5vh;
+        right: -400px;
+        background-color: rgb(206, 180, 192);
+        width: 300px;
+        height: 100%;
+        padding-top: 65px;
+    }
+    .menu li{
+        width: 100%;    
+    }
+    .menu li a,
+    .menu li a:hover{
+        padding: 30px;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.3)
+        inset;
+    }
+}
+/*hamburger css end here*/
+    #roadmap{
+        text-align:center;
+        height: 350px;
+        padding: 20px;
+        margin: auto;
+    }
+    #bottom{
+        background-image: url("Background\ Image\ 1.png");
+    }
+</style>
 </head>
 
 <body>
 
-    <!--hamburger start here-->
+  <!--hamburger start here-->
     <div class="nav" style="z-index: 3;">
         <div class="third" style="text-align: left">
             <h3>Atmosleep</h3>
         </div>
 
 
-        <div class="navigation">
-
-
-            <input type="checkbox" class="togggle-menu">
-
-            <div class="hamburger"></div>
-            <ul class="menu">
-
-                <li><a href="../../Home/Home.html">Home</a></li>
-                <li><a href="../../About Us/About_Us.html">About us</a></li>
-                <li><a href="../../Java script test/quiz.html">Pillow Quiz</a></li>
-                <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
-                <li><a href="../products/products.html">Products</a></li>
-                <li><a href="../Finances/Finances.html">Finances</a></li>
-                <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
-                <li><a href="../Investors/Ask Page/ask.html">Ask</a></li>
-                <li><a href="../Website story/website story.html">Website Story</a></li>
+<div class="navigation">
+    
+   
+    <input type="checkbox" class="togggle-menu">
+    
+    <div class="hamburger"></div>
+        <ul class="menu">
+         
+            <li><a href="../../Home/Home.html">Home</a></li>
+            <li><a href="../../About Us/About_Us.html">About us</a></li>
+            <li><a href="../problems/Problems_Solution.html">Solutions</a></li>
+            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="../Finances/Finances.html">Finances</a></li>
+            <li><a href="../Marketplace/marketplace.html">Marketplace</a></li>
+            <li><a href="../Website story/website story.html">Website Story</a></li>
+          
             </ul>
+       
+</div>
 
-        </div>
-
-    </div>
+   </div>
     <!--close of nav bar-->
     <!--hamburger close here-->
 
@@ -511,8 +548,9 @@
             </div>
         </div>
         <div id="box2" class="flexclass" style="background-color: white">
-            <input type="button" value="Start" id="start" style="margin-left: 5%;">
             <div class="middleMagic">
+                <input type="button" value="Start Demo" id="start">
+                <br>
                 <img src="led light.png" style="width: 100%; z-index: 1;" id="led">
             </div>
         </div>
@@ -567,38 +605,34 @@
     <br>
     <br>
     <div id="bottom">
-        <div id="roadmap">
-            <br>
-            <h1 style="margin:auto">Roadmap</h1><br>
-            <div class="third" id="mvp1">
-                <h1>MVP1</h1>
-                <div id="maintext1" style="color: #fff;">
-                    Pillow with a Built-In Speaker
-                </div>
-            </div>
-            <div class="third" id="mvp2" style="color: #fff;">
-                <h1>MVP2</h1>
-                <div id="maintext2">
-                    App That Customizes the Learning Process While Sleeping
-                </div>
-            </div>
-            <div class="third" id="mvp3" style="color: #fff;">
-                <h1>MVP3</h1>
-                <div id="maintext3">
-                    Combination of MVP1 and MVP2
-                </div>
+    <div id="roadmap">
+        <br><h1 style="margin:auto">Roadmap</h1><br>
+        <div class="third" id="mvp1"><h1>MVP1</h1>
+            <div id="maintext1" style="color: #fff;">
+                Pillow with a Built-In Speaker
             </div>
         </div>
+        <div class="third" id="mvp2" style="color: #fff;"><h1>MVP2</h1>
+            <div id="maintext2">
+                App That Customizes the Learning Process While Sleeping
+            </div>
+        </div>
+        <div class="third" id="mvp3" style="color: #fff;"><h1>MVP3</h1>
+            <div id="maintext3">
+                Combination of MVP1 and MVP2
+            </div>
+        </div>
+    </div>
 
-        <div class="footer">
-            <!--footer starts here-->
-            <div class="third" style="text-align: left">
-                <h4>Atmosleep</h4>
-            </div>
-            <div class="third" style="text-align: right; float: right;">
-                <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
-            </div>
+    <div class="footer">
+        <!--footer starts here-->
+        <div class="third" style="text-align: left">
+            <h4>Atmosleep</h4>
         </div>
+        <div class="third" style="text-align: right; float: right;">
+            <p>Copyright © 2021-2022 Atmosleep. All rights reserved.</p>
+        </div>
+    </div>
     </div>
 </body>
 
